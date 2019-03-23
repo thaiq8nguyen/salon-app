@@ -2,78 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f08bc22-4422-4c10-9d74-e7ecbc88b366" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/file.template.settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareClient.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareReceiptInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareReceiptRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareReceiptServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/Technician/TechnicianInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/Technician/TechnicianRespository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/Technician/TechnicianServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/User/UserInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/User/UserServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AppController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/square.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/TechnicianFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/GiftRegister.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/SquareRegister.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/TopNavigationBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/plugins/format-dollar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/plugins/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/plugins/persist-states.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/account-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/account-type-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/authentication-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/date-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/square-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/technician-sale-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/technician-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/accounts/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/accounts/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/accounts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/accounts/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/square/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/square/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/square/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/square/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/technicians/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/technicians/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/technicians/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/technicians/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Logout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Settings.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/services/authentication-services.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/authentication-services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Login.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,10 +60,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js">
+        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-106">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="276">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,17 +74,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="27" column="124" selection-start-line="27" selection-start-column="124" selection-end-line="27" selection-end-column="124" />
+            <state relative-caret-position="-1105">
+              <caret line="144" selection-start-line="144" selection-end-line="144" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js">
+        <entry file="file://$PROJECT_DIR$/resources/js/services/authentication-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="119" column="51" selection-start-line="119" selection-start-column="51" selection-end-line="119" selection-end-column="51" />
+            <state relative-caret-position="415">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -156,23 +93,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/index.js">
+        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1378">
-              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+            <state relative-caret-position="572">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
-                <element signature="e#164#220#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/square_receipts">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/resources/js/views/Login.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1159">
+              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -202,13 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/js/store/modules/square/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/square/mutations.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/app/SquareReceipt.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SquareReceiptController.php" />
-        <option value="$PROJECT_DIR$/resources/js/services/square-services.js" />
-        <option value="$PROJECT_DIR$/resources/js/components/DatePicker.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/GiftRegister.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" />
         <option value="$PROJECT_DIR$/resources/js/store/actions.js" />
@@ -227,7 +165,6 @@
         <option value="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/components/TopNavigationBar.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/App.vue" />
         <option value="$PROJECT_DIR$/resources/js/router/routes.js" />
@@ -253,6 +190,14 @@
         <option value="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" />
         <option value="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/resources/js/plugins/persist-states.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" />
+        <option value="$PROJECT_DIR$/resources/js/services/authentication-services.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/index.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" />
+        <option value="$PROJECT_DIR$/resources/js/views/Login.vue" />
       </list>
     </option>
   </component>
@@ -511,15 +456,6 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="add-technician-sales" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -530,33 +466,6 @@
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="authentications" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="square" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="technicians" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="update-technician-sales" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
@@ -629,15 +538,16 @@
       <updated>1551673944909</updated>
       <workItem from="1551673946289" duration="153252000" />
       <workItem from="1552549652121" duration="59000" />
-      <workItem from="1552577074987" duration="126562000" />
+      <workItem from="1552577074987" duration="134597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279873000" />
+    <option name="totallyTimeSpent" value="287908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19142176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -684,112 +594,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="168" column="9" selection-start-line="163" selection-start-column="8" selection-end-line="168" selection-end-column="9" />
-          <folding>
-            <element signature="e#2165#2171#0" expanded="true" />
-            <element signature="e#2455#2461#0" expanded="true" />
-            <element signature="e#2743#2749#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/SquareRegister.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/square/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2028">
-          <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/oauth_auth_codes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/oauth_personal_access_clients">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/plugins/persist-states.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/oauth_access_tokens">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/UpdateSquareReceipt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -817,16 +621,6 @@
           <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/services/authentication-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -964,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SquareClientController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
@@ -1033,13 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
@@ -1047,20 +827,6 @@
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="27" column="124" selection-start-line="27" selection-start-column="124" selection-end-line="27" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/square_receipts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1078,14 +844,150 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-948" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/square_receipts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/oauth_clients">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/oauth_personal_access_clients">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/UpdateSquareReceipt.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1378">
+        <state relative-caret-position="1049">
           <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
             <element signature="e#164#220#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/services/authentication-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/plugins/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/oauth_access_tokens">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/plugins/persist-states.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

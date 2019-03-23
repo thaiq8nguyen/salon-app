@@ -1,4 +1,3 @@
-import DateServices from "Services/date-services";
 
 export default {
 
@@ -10,7 +9,7 @@ export default {
 
 	isAuthenticated (state) {
 
-		return state.authentication.accessToken && DateServices.isSameOrBeforeToday(state.authentication.tokenExpiration);
+		return state.authentication.accessToken;
 
 	},
 

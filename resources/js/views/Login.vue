@@ -9,17 +9,26 @@
 								<v-card-title class="dark_primary">
 									<span class="headline white--text">Login</span>
 								</v-card-title>
-								<v-form>
+								<v-form @submit.prevent="validate">
 									<v-card-text>
 										<v-text-field
-												v-model="email"
+												v-model="credential.email"
+												v-validate="'required'"
 												label="Email"
+												type="text"
+												name="email"
+												data-vv-name="email"
+												:error-messages="errors.collect('email')"
 										>
 										</v-text-field>
 										<v-text-field
-												v-model="password"
+												v-model="credential.password"
+												v-validate="'required'"
 												label="Password"
 												type="password"
+												name="password"
+												data-vv-name="password"
+												:error-messages="errors.collect('password')"
 										>
 										</v-text-field>
 									</v-card-text>
@@ -28,7 +37,7 @@
 									</v-card-text>
 									<v-card-actions>
 										<v-spacer></v-spacer>
-										<v-btn class="info" :loading="isAuthenticating" @click.prevent="login">Login</v-btn>
+										<v-btn class="info" :loading="isAuthenticating" type="submit">Login</v-btn>
 									</v-card-actions>
 								</v-form>
 							</v-card>
@@ -46,8 +55,21 @@ export default {
 	data () {
 
 		return {
-			email: "",
-			password: ""
+			credential: {
+				email: "",
+				password: ""
+			},
+			dictionary: {
+				custom: {
+					email: {
+						required: "Enter your email",
+					},
+					password: {
+						required: "Enter your password",
+					},
+				}
+			},
+
 		};
 
 	},
@@ -65,11 +87,28 @@ export default {
 
 		}
 	},
+	created () {
+
+		this.$validator.localize("en", this.dictionary);
+
+	},
 	methods: {
+		validate () {
 
-		login () {
+			this.$validator.validateAll().then((result) => {
 
-			this.$store.dispatch("Authentications/login", { email: this.email, password: this.password });
+				if (result) {
+
+					this.login();
+
+				}
+
+			});
+
+		},
+		login (){
+
+			this.$store.dispatch("Authentications/login", this.credential);
 
 		}
 	},

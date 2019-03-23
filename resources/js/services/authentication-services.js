@@ -14,7 +14,7 @@ export default {
 
 		} else {
 
-			return null;
+			return "";
 
 		}
 
@@ -35,6 +35,11 @@ export default {
 	user () {
 
 		return Services.apiClient.get("/user");
+
+	},
+	removeAuthentication () {
+
+		Services.persistentState.remove("authentications");
 
 	}
 };

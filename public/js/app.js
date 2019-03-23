@@ -2877,12 +2877,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Login",
   data: function data() {
     return {
-      email: "",
-      password: ""
+      credential: {
+        email: "",
+        password: ""
+      },
+      dictionary: {
+        custom: {
+          email: {
+            required: "Enter your email"
+          },
+          password: {
+            required: "Enter your password"
+          }
+        }
+      }
     };
   },
   computed: {
@@ -2893,12 +2914,21 @@ __webpack_require__.r(__webpack_exports__);
       return this.$store.getters["Authentications/errorMessage"];
     }
   },
+  created: function created() {
+    this.$validator.localize("en", this.dictionary);
+  },
   methods: {
-    login: function login() {
-      this.$store.dispatch("Authentications/login", {
-        email: this.email,
-        password: this.password
+    validate: function validate() {
+      var _this = this;
+
+      this.$validator.validateAll().then(function (result) {
+        if (result) {
+          _this.login();
+        }
       });
+    },
+    login: function login() {
+      this.$store.dispatch("Authentications/login", this.credential);
     }
   }
 });
@@ -33532,32 +33562,77 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-form",
+                                {
+                                  on: {
+                                    submit: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.validate($event)
+                                    }
+                                  }
+                                },
                                 [
                                   _c(
                                     "v-card-text",
                                     [
                                       _c("v-text-field", {
-                                        attrs: { label: "Email" },
+                                        directives: [
+                                          {
+                                            name: "validate",
+                                            rawName: "v-validate",
+                                            value: "required",
+                                            expression: "'required'"
+                                          }
+                                        ],
+                                        attrs: {
+                                          label: "Email",
+                                          type: "text",
+                                          name: "email",
+                                          "data-vv-name": "email",
+                                          "error-messages": _vm.errors.collect(
+                                            "email"
+                                          )
+                                        },
                                         model: {
-                                          value: _vm.email,
+                                          value: _vm.credential.email,
                                           callback: function($$v) {
-                                            _vm.email = $$v
+                                            _vm.$set(
+                                              _vm.credential,
+                                              "email",
+                                              $$v
+                                            )
                                           },
-                                          expression: "email"
+                                          expression: "credential.email"
                                         }
                                       }),
                                       _vm._v(" "),
                                       _c("v-text-field", {
+                                        directives: [
+                                          {
+                                            name: "validate",
+                                            rawName: "v-validate",
+                                            value: "required",
+                                            expression: "'required'"
+                                          }
+                                        ],
                                         attrs: {
                                           label: "Password",
-                                          type: "password"
+                                          type: "password",
+                                          name: "password",
+                                          "data-vv-name": "password",
+                                          "error-messages": _vm.errors.collect(
+                                            "password"
+                                          )
                                         },
                                         model: {
-                                          value: _vm.password,
+                                          value: _vm.credential.password,
                                           callback: function($$v) {
-                                            _vm.password = $$v
+                                            _vm.$set(
+                                              _vm.credential,
+                                              "password",
+                                              $$v
+                                            )
                                           },
-                                          expression: "password"
+                                          expression: "credential.password"
                                         }
                                       })
                                     ],
@@ -33584,13 +33659,8 @@ var render = function() {
                                         {
                                           staticClass: "info",
                                           attrs: {
-                                            loading: _vm.isAuthenticating
-                                          },
-                                          on: {
-                                            click: function($event) {
-                                              $event.preventDefault()
-                                              return _vm.login($event)
-                                            }
+                                            loading: _vm.isAuthenticating,
+                                            type: "submit"
                                           }
                                         },
                                         [_vm._v("Login")]
@@ -77148,7 +77218,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
     if (Services.persistState.load("authentications")) {
       return Services.persistState.load("authentications");
     } else {
-      return null;
+      return "";
     }
   },
   login: function login(credential) {
@@ -77159,42 +77229,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
   },
   user: function user() {
     return Services.apiClient.get("/user");
-  }
-});
-
-/***/ }),
-
-/***/ "./resources/js/services/date-services.js":
-/*!************************************************!*\
-  !*** ./resources/js/services/date-services.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var Plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Plugins */ "./resources/js/plugins/index.js");
-
-
-var Services = new vue__WEBPACK_IMPORTED_MODULE_0___default.a();
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_1__["default"]);
-/* harmony default export */ __webpack_exports__["default"] = ({
-  getTodaysDate: function getTodaysDate() {
-    return Services.$moment().format("MM/DD/YYYY");
   },
-  getDateFromToday: function getDateFromToday(numberOfDay) {
-    return Services.$moment().add(numberOfDay, "days").format("MM/DD/YYYY");
-  },
-  getCurrentMonthAndYear: function getCurrentMonthAndYear() {
-    return Services.$moment().format("MMMM YYYY");
-  },
-  isAfterToday: function isAfterToday(date) {
-    return Services.$moment().isAfter(date);
-  },
-  isSameOrBeforeToday: function isSameOrBeforeToday(date) {
-    return Services.$moment().isSameOrBefore(date);
+  removeAuthentication: function removeAuthentication() {
+    Services.persistentState.remove("authentications");
   }
 });
 
@@ -77825,6 +77862,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
       if (errors.response.status === 401) {
         commit("SET_ERROR_MESSAGE", errors.response.data.message);
       }
+
+      Services_authentication_services__WEBPACK_IMPORTED_MODULE_1__["default"].removeAuthentication();
     }).then(function () {
       commit("SET_IS_AUTHENTICATING", false);
     });
@@ -77852,14 +77891,12 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var Services_date_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Services/date-services */ "./resources/js/services/date-services.js");
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   isAuthenticating: function isAuthenticating(state) {
     return state.isAuthenticating;
   },
   isAuthenticated: function isAuthenticated(state) {
-    return state.authentication.accessToken && Services_date_services__WEBPACK_IMPORTED_MODULE_0__["default"].isSameOrBeforeToday(state.authentication.tokenExpiration);
+    return state.authentication.accessToken;
   },
   userFullName: function userFullName(state) {
     return state.authentication.userFullName;

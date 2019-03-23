@@ -27,6 +27,7 @@ export default {
 					commit("SET_ERROR_MESSAGE", errors.response.data.message);
 
 				}
+				AuthenticationServices.removeAuthentication();
 
 			})
 			.then(() => {
