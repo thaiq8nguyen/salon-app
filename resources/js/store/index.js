@@ -1,0 +1,58 @@
+import Vue from "vue";
+import Vuex from "vuex";
+import getters from "./getters";
+import actions from "./actions";
+import mutations from "./mutations";
+
+// Modules
+
+import Authentications from "./modules/authentications";
+import Technicians from "./modules/technicians";
+import AddTechnicianSales from "./modules/add-technician-sales";
+import UpdateTechnicianSales from "./modules/update-technician-sales";
+import Square from "./modules/square";
+import Accounts from "./modules/accounts";
+import Plugins from "Plugins";
+
+// Plugins
+
+let Services = new Vue();
+Vue.use(Plugins);
+
+const persistStates = (store) => {
+
+	store.subscribe((mutation, state) => {
+
+		// FUTURE UPDATE Services.persistState.save("state", state);
+		switch (mutation.type) {
+
+		case "Authentications/SET_AUTHENTICATION": Services.persistState.save("authentications", mutation.payload);
+			break;
+		case "Technicians/SET_TECHNICIANS": Services.persistState.save("technicians", mutation.payload);
+
+		}
+
+	});
+
+};
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+	modules: {
+		Authentications, Technicians, AddTechnicianSales, UpdateTechnicianSales, Square, Accounts,
+	},
+	state: {
+
+		date: new Date()
+
+	},
+	getters,
+
+	actions,
+
+	mutations,
+
+	plugins: [persistStates],
+
+});
