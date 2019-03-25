@@ -6,7 +6,7 @@
 				absolute
 				clipped-left
 		>
-			<v-toolbar-side-icon class="white--text"></v-toolbar-side-icon>
+			<v-toolbar-side-icon class="white--text" to="/dashboard"></v-toolbar-side-icon>
 			<v-toolbar-title>
 				<span class="headline white--text">{{ title }}</span>
 			</v-toolbar-title>

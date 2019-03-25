@@ -5,11 +5,12 @@ let Services = new Vue();
 Vue.use(Plugins);
 
 export default {
-	load () {
+	loadTechnicians () {
 
-		if (Services.persistState.load("Technicians")) {
+		if (Services.persistState.load()) {
 
-			return Services.persistState.load("Technicians");
+			const state = Services.persistState.load();
+			return state.Technicians;
 
 		} else {
 
@@ -22,5 +23,10 @@ export default {
 
 		return Services.apiClient.get("/technicians");
 
-	}
+	},
+	addTechnician (technician) {
+
+		return Services.apiClient.post("/technicians", technician);
+
+	},
 };

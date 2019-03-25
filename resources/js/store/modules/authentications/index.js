@@ -1,11 +1,10 @@
 import getters from "./getters";
 import actions from "./actions";
 import mutations from "./mutations";
-import AuthenticationServices from "Services/authentication-services";
 
 const state = {
 
-	authentication: AuthenticationServices.load(),
+	authentication: "",
 	isAuthenticating: false,
 	errorMessage: "",
 

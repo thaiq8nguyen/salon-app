@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/logout', 'AuthenticationController@logout');
 
     Route::get('/technicians', 'TechnicianController@getActive');
+    Route::post('/technicians', 'TechnicianController@add');
 
     Route::get('/technician-sales', 'TechnicianSaleController@get');
     Route::post('/technician-sales', 'TechnicianSaleController@add');

@@ -14,6 +14,12 @@ export default {
 
 	},
 	computed: {},
+
+	created () {
+
+		this.$store.commit("INITIALIZE_STATE");
+
+	},
 	methods: {},
 };
 

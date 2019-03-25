@@ -13,4 +13,6 @@ interface TechnicianInterface
 
     public function active();
 
+    public function add($technician);
+
 }

@@ -1,8 +1,4 @@
-import Vue from "vue";
-import Plugins from "Plugins";
-
-let Services = new Vue();
-Vue.use(Plugins);
+import TechnicianServices from "Services/technician-services";
 
 export default {
 
@@ -10,7 +6,7 @@ export default {
 
 		return new Promise((resolve, reject) => {
 
-			return Services.apiClient.get("/technicians")
+			return TechnicianServices.getTechnicians("/technicians")
 				.then((response) => {
 
 					resolve(response.data.technicians);
@@ -24,6 +20,25 @@ export default {
 
 		});
 
+	},
+	addTechnician ({ commit }, technician) {
+
+		return new Promise((resolve, reject) => {
+
+			return TechnicianServices.addTechnician(technician)
+				.then(response => {
+
+					commit("ADD_TECHNICIAN_TO_TECHNICIANS", response.data.technician)
+					resolve(response.data.technician);
+
+				})
+				.catch((errors) => {
+
+					reject(errors);
+
+				});
+
+		});
 	},
 
 

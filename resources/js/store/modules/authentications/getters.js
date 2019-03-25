@@ -9,7 +9,7 @@ export default {
 
 	isAuthenticated (state) {
 
-		return state.authentication.accessToken;
+		return state.authentication.accessToken !== "";
 
 	},
 
