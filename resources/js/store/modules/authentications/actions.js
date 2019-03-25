@@ -27,7 +27,7 @@ export default {
 					commit("SET_ERROR_MESSAGE", errors.response.data.message);
 
 				}
-				AuthenticationServices.removeAuthentication();
+				Services.persistState.remove();
 
 			})
 			.then(() => {
@@ -45,7 +45,7 @@ export default {
 
 				Router.push("logout");
 
-				Services.persistState.remove("authentications");
+				Services.persistState.remove();
 
 				commit("RESET_AUTHENTICATION");
 

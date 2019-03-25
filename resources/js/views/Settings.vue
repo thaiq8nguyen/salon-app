@@ -6,7 +6,10 @@
 				<v-container grid-list-md fluid>
 					<v-layout row wrap>
 						<v-flex md3>
-							<v-card>
+							<technician-settings></technician-settings>
+						</v-flex>
+						<v-flex md3>
+							<!--v-card>
 								<v-card-title>
 									<span class="title">Accounts</span>
 								</v-card-title>
@@ -47,10 +50,10 @@
 										:items="accounts"
 								>
 									<template slot="items" slot-scope="props">
-										<td class="text-md-left primary_text--text subheading">{{ props.item.name }}</td>
+										<td class="text-md-left primary_text&#45;&#45;text subheading">{{ props.item.name }}</td>
 									</template>
 								</v-data-table>
-							</v-card>
+							</v-card>-->
 						</v-flex>
 					</v-layout>
 				</v-container>
@@ -61,13 +64,16 @@
 
 <script>
 import TopNavigationBar from "Components/TopNavigationBar";
+import TechnicianSettings from "Components/TechnicianSettings";
+
 export default {
 	name: "Settings",
-	components: { TopNavigationBar },
+	components: { TopNavigationBar, TechnicianSettings },
 
 	data () {
 
 		return {
+
 			title: this.$route.meta.title,
 			newAccount: {
 				accountTypeID: "",
@@ -117,7 +123,7 @@ export default {
 	methods: {
 		validate () {
 
-			this.$validator.validateAll((result) => {
+			this.$validator.validateAll().then((result) => {
 
 				if (result) {
 

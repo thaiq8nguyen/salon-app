@@ -8,15 +8,18 @@ export default {
 
 	load () {
 
-		if (Services.persistState.load("authentications")) {
+		if (Services.persistState.load()) {
 
-			return Services.persistState.load("authentications");
+			const auth = Services.persistState.load();
+
+			return auth.Authentications.authentication;
 
 		} else {
 
 			return "";
 
 		}
+
 
 	},
 
@@ -39,7 +42,7 @@ export default {
 	},
 	removeAuthentication () {
 
-		Services.persistentState.remove("authentications");
+		Services.persistentState.remove();
 
 	}
 };

@@ -23,14 +23,7 @@ const persistStates = (store) => {
 
 	store.subscribe((mutation, state) => {
 
-		// FUTURE UPDATE Services.persistState.save("state", state);
-		switch (mutation.type) {
-
-		case "Authentications/SET_AUTHENTICATION": Services.persistState.save("authentications", mutation.payload);
-			break;
-		case "Technicians/SET_TECHNICIANS": Services.persistState.save("technicians", mutation.payload);
-
-		}
+		Services.persistState.save(state);
 
 	});
 

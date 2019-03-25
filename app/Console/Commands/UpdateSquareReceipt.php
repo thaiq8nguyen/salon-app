@@ -2,17 +2,20 @@
 
 namespace App\Console\Commands;
 
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use App\Bookkeeping\SquareReceipt\SquareReceiptInterface;
 
 class UpdateSquareReceipt extends Command
 {
+
+
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'update:square-receipt {date}';
+    protected $signature = 'update:square-receipt {date?}';
 
     /**
      * The console command description.
@@ -34,6 +37,13 @@ class UpdateSquareReceipt extends Command
 
     public function handle(SquareReceiptInterface $squareReceipt)
     {
-        $squareReceipt->updateSquareReceipt($this->argument('date'));
+
+        if (is_null($this->argument('date'))) {
+            $date = Carbon::now()->format('Y-m-d');
+        } else {
+            $date = $this->argument('date');
+        }
+
+        $squareReceipt->updateSquareReceipt($date);
     }
 }

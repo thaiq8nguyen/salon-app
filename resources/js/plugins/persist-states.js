@@ -1,14 +1,16 @@
-const load = (state) => {
+const load = () => {
 
 	try {
 
-		const serializedState = localStorage.getItem(state);
+		const serializedState = localStorage.getItem("state");
 		if (serializedState === null) {
 
 			return undefined;
 
 		}
-		return JSON.parse(serializedState);
+		const state = JSON.parse(serializedState);
+
+		return state;
 
 	} catch (errors) {
 
@@ -18,12 +20,12 @@ const load = (state) => {
 
 };
 
-const save = (module, state) => {
+const save = (state) => {
 
 	try {
 
 		const serializedState = JSON.stringify(state);
-		localStorage.setItem(module, serializedState);
+		localStorage.setItem("state", serializedState);
 
 	} catch (errors) {
 
@@ -31,11 +33,11 @@ const save = (module, state) => {
 
 };
 
-const remove = (module) => {
+const remove = () => {
 
 	try {
 
-		localStorage.removeItem(module);
+		localStorage.removeItem("state");
 
 	} catch (errors) {
 

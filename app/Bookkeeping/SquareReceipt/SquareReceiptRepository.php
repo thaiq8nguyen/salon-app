@@ -24,8 +24,13 @@ class SquareReceiptRepository implements SquareReceiptInterface
 
     public function updateSquareReceipt($date)
     {
+        if ($date) {
+            $carbonDate = Carbon::createFromFormat('Y-m-d', $date)->startOfDay();
+        } else {
+            $carbonDate = Carbon::now()->startOfDay();
+        }
+
         $results = [];
-        $carbonDate = Carbon::createFromFormat('Y-m-d', $date)->startOfDay();
 
         $client = new SquareClient();
 
