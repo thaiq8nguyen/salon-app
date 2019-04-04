@@ -56,6 +56,11 @@
 							<v-list-tile-action>+&nbsp;{{ $dollar.format(giftCardSold.amount) }}</v-list-tile-action>
 							<v-list-tile-action class="ml-3"></v-list-tile-action>
 						</v-list-tile>
+						<v-list-tile v-show="creditCardTip.amount > 0">
+							<v-list-tile-content>{{ creditCardTip.name }}</v-list-tile-content>
+							<v-list-tile-action>+&nbsp;{{ $dollar.format(creditCardTip.amount) }}</v-list-tile-action>
+							<v-list-tile-action class="ml-3"></v-list-tile-action>
+						</v-list-tile>
 						<v-divider></v-divider>
 						<v-list-tile :class="netTotalStyle">
 							<v-list-tile-content>Net Total</v-list-tile-content>
@@ -117,6 +122,11 @@ export default {
 		convenienceFee () {
 
 			return this.$store.getters["Square/convenienceFee"];
+
+		},
+		creditCardTip () {
+
+			return this.$store.getters["Square/creditCardTip"];
 
 		},
 		netTotalTechnicianSaleAmount () {

@@ -47,7 +47,9 @@ export default {
 
 			const squareGiftCardSold = rootGetters["Square/giftCardSold"];
 
-			return getters.totalSaleAmount + getters.existingTotalSaleAmount +
+			const creditCardTip = rootGetters["Square/creditCardTip"];
+
+			return getters.totalSaleAmount + getters.existingTotalSaleAmount + parseFloat(creditCardTip.amount) +
 				parseFloat(squareConvenienceFee.amount) - parseFloat(squareGiftCardRedeem.amount) + parseFloat(squareGiftCardSold.amount);
 
 		} else {

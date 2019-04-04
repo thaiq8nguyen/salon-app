@@ -2571,6 +2571,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "TechnicianPendingSales",
   data: function data() {
@@ -2596,6 +2601,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     convenienceFee: function convenienceFee() {
       return this.$store.getters["Square/convenienceFee"];
+    },
+    creditCardTip: function creditCardTip() {
+      return this.$store.getters["Square/creditCardTip"];
     },
     netTotalTechnicianSaleAmount: function netTotalTechnicianSaleAmount() {
       return this.$store.getters["AddTechnicianSales/netTotalTechnicianSaleAmount"];
@@ -33405,6 +33413,37 @@ var render = function() {
                                 "+ " +
                                   _vm._s(
                                     _vm.$dollar.format(_vm.giftCardSold.amount)
+                                  )
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("v-list-tile-action", { staticClass: "ml-3" })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-list-tile",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.creditCardTip.amount > 0,
+                                expression: "creditCardTip.amount > 0"
+                              }
+                            ]
+                          },
+                          [
+                            _c("v-list-tile-content", [
+                              _vm._v(_vm._s(_vm.creditCardTip.name))
+                            ]),
+                            _vm._v(" "),
+                            _c("v-list-tile-action", [
+                              _vm._v(
+                                "+ " +
+                                  _vm._s(
+                                    _vm.$dollar.format(_vm.creditCardTip.amount)
                                   )
                               )
                             ]),
@@ -78778,7 +78817,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
       var squareConvenienceFee = rootGetters["Square/convenienceFee"];
       var squareGiftCardRedeem = rootGetters["Square/giftCardRedeem"];
       var squareGiftCardSold = rootGetters["Square/giftCardSold"];
-      return getters.totalSaleAmount + getters.existingTotalSaleAmount + parseFloat(squareConvenienceFee.amount) - parseFloat(squareGiftCardRedeem.amount) + parseFloat(squareGiftCardSold.amount);
+      var creditCardTip = rootGetters["Square/creditCardTip"];
+      return getters.totalSaleAmount + getters.existingTotalSaleAmount + parseFloat(creditCardTip.amount) + parseFloat(squareConvenienceFee.amount) - parseFloat(squareGiftCardRedeem.amount) + parseFloat(squareGiftCardSold.amount);
     } else {
       return 0;
     }
