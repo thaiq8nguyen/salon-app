@@ -17,7 +17,7 @@ export default {
 			const items = state.receipts.receipt_items;
 			return items.filter(function (item) {
 
-				return item.name === "Cash Receipt" || item.name === "Credit Card Receipt";
+				return item.name === "Cash Receipt" || item.name === "Credit Card Receipt" || item.name === "Other Receipt";
 
 			});
 
@@ -147,5 +147,6 @@ export default {
 
 		}
 
-	}
+	},
+
 };

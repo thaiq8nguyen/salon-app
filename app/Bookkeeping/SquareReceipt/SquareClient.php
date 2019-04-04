@@ -73,8 +73,12 @@ class SquareClient
         $refund = 0;
         $discount = 0;
 
+        // PAYMENT TYPES
         $cash = 0;
         $creditCard = 0;
+        $other = 0;
+
+        // ITEMS
         $convenienceFee = 0;
         $giftCardSold = 0;
 
@@ -91,6 +95,8 @@ class SquareClient
                     $cash += $tender->total_money->amount;
                 } elseif ($tender->type == 'CREDIT_CARD') {
                     $creditCard += $tender->total_money->amount;
+                } elseif ($tender->type == 'OTHER') {
+                    $other += $tender->total_money->amount;
                 }
             }
             foreach ($payment->itemizations as $item) {
@@ -110,7 +116,8 @@ class SquareClient
                 ['accountID' => 2, 'amount' => $this->formatMoney($creditCard)],
                 ['accountID' => 10, 'amount' => 0.0], // Gift Card Redeem
                 ['accountID' => 3, 'amount' => $this->formatMoney($giftCardSold)], //Gift Card Sold
-                ['accountID' => 6, 'amount' => $this->formatMoney($convenienceFee)]
+                ['accountID' => 6, 'amount' => $this->formatMoney($convenienceFee)],
+                ['accountID' => 11, 'amount' => $this->formatMoney($other)]
         ];
         /*return [
             ['accountName' => 'creditCardTip', 'amount' => $this->formatMoney($creditCardTip)],
