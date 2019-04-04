@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f08bc22-4422-4c10-9d74-e7ecbc88b366" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/PayPeriod/PayPeriodInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/PayPeriod/PayPeriodRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/PayPeriod/PayPeriodServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/Setting/SettingInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/Setting/SettingRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Bookkeeping/Setting/SettingServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/app-setting-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/pay-period-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/app-settings/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/app-settings/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/app-settings/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/app-settings/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/pay-periods/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/pay-periods/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/pay-periods/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/pay-periods/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4addcc9b-075c-45a7-9d19-3a07b8d1e96e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4addcc9b-075c-45a7-9d19-3a07b8d1e96e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/GiftRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/GiftRegister.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/services/account-type-services.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/account-type-services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/services/date-services.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/date-services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/technicians/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/technicians/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -140,17 +107,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/actions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="227">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -575,18 +533,18 @@
       <workItem from="1553699485020" duration="20301000" />
       <workItem from="1554264591846" duration="28000" />
       <workItem from="1554264670262" duration="13000" />
-      <workItem from="1554305565462" duration="10533000" />
+      <workItem from="1554305565462" duration="11133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358615000" />
+    <option name="totallyTimeSpent" value="359215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14813344" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14813344" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -599,7 +557,7 @@
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32997987" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32997987" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.1861167" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1861167" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32997987" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -935,13 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/technicians/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -1028,6 +979,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/store/modules/pay-periods/getters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -1037,8 +995,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        <state relative-caret-position="227">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
         </state>
       </provider>
     </entry>

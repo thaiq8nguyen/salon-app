@@ -2345,7 +2345,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SaleDatePicker",
   data: function data() {
@@ -2365,17 +2364,15 @@ __webpack_require__.r(__webpack_exports__);
     formattedDate: function formattedDate() {
       return this.$store.getters["dateTextField"];
     },
-    mininumAllowedDate: function mininumAllowedDate() {
-      return this.$store.getters["PayPeriods/beginDate"];
-    },
+
+    /* mininumAllowedDate () {
+    		return this.$store.getters["PayPeriods/beginDate"];
+    	}, */
     maximumAllowedDate: function maximumAllowedDate() {
       return this.$store.getters["AppSettings/maximumAllowedDate"];
     },
     isNextDateAllowed: function isNextDateAllowed() {
       return this.date >= this.maximumAllowedDate;
-    },
-    isPreviousDateAllowed: function isPreviousDateAllowed() {
-      return this.date <= this.mininumAllowedDate;
     }
   },
   methods: {
@@ -32931,7 +32928,7 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  attrs: { icon: "", disabled: _vm.isPreviousDateAllowed },
+                  attrs: { icon: "" },
                   nativeOn: {
                     click: function($event) {
                       return _vm.goToPreviousDate(_vm.date)
@@ -32978,7 +32975,6 @@ var render = function() {
                       "no-title": "",
                       scrollable: "",
                       actions: "",
-                      min: _vm.mininumAllowedDate,
                       max: _vm.maximumAllowedDate
                     },
                     model: {

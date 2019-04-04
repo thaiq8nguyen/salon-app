@@ -2,7 +2,7 @@
 	<div id="date-picker">
 		<v-card>
 			<v-card-title class="justify-space-between">
-				<v-btn icon :disabled="isPreviousDateAllowed" @click.native="goToPreviousDate(date)">
+				<v-btn icon @click.native="goToPreviousDate(date)">
 					<v-icon>keyboard_arrow_left</v-icon>
 				</v-btn>
 				<v-menu
@@ -26,7 +26,6 @@
 							no-title
 							scrollable
 							actions
-							:min="mininumAllowedDate"
 							:max="maximumAllowedDate"
 					>
 					</v-date-picker>
@@ -67,11 +66,11 @@ export default {
 			return this.$store.getters["dateTextField"];
 
 		},
-		mininumAllowedDate () {
+		/* mininumAllowedDate () {
 
 			return this.$store.getters["PayPeriods/beginDate"];
 
-		},
+		}, */
 		maximumAllowedDate () {
 
 			return this.$store.getters["AppSettings/maximumAllowedDate"];
@@ -83,11 +82,11 @@ export default {
 
 		},
 
-		isPreviousDateAllowed () {
+		/* isPreviousDateAllowed () {
 
 			return this.date <= this.mininumAllowedDate;
 
-		},
+		}, */
 	},
 	methods: {
 
