@@ -34133,25 +34133,17 @@ var render = function() {
                                                       }
                                                     },
                                                     [
-                                                      _c(
-                                                        "v-list-tile-avatar",
-                                                        [
-                                                          _c(
-                                                            "v-icon",
-                                                            {
-                                                              attrs: {
-                                                                large: ""
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "account_box"
-                                                              )
-                                                            ]
-                                                          )
-                                                        ],
-                                                        1
-                                                      ),
+                                                      _c("v-list-tile-avatar", [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            alt: "",
+                                                            src:
+                                                              "images/technicians/" +
+                                                              technician.technician_image +
+                                                              ".svg"
+                                                          }
+                                                        })
+                                                      ]),
                                                       _vm._v(" "),
                                                       _c(
                                                         "v-list-tile-content",
@@ -79520,8 +79512,6 @@ var state = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var Services_technician_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Services/technician-services */ "./resources/js/services/technician-services.js");
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   INITIALIZE_STATE: function INITIALIZE_STATE(state) {},
   SET_TECHNICIANS: function SET_TECHNICIANS(state, value) {

@@ -32,7 +32,7 @@
 											<template v-for="technician in technicians">
 												<v-list-tile :key="technician.id" @click="showNewSaleDialog(technician)">
 													<v-list-tile-avatar>
-														<v-icon large>account_box</v-icon>
+														<img alt="" :src="`images/technicians/${technician.technician_image}.svg`">
 													</v-list-tile-avatar>
 													<v-list-tile-content>{{ technician.first_name }}&nbsp;{{ technician.last_name }}</v-list-tile-content>
 												</v-list-tile>

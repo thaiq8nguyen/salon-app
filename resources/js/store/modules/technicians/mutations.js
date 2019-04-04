@@ -1,4 +1,3 @@
-import TechnicianServices from "Services/technician-services";
 
 export default {
 
