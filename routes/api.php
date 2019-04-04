@@ -40,7 +40,12 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::post('/accounts', 'AccountController@add');
 
-    // Testing Square API
-    Route::get('/test-square-receipts', 'SquareClientController@get');
+    Route::get('/settings', 'SettingController@getSettings');
 
+    // Testing Square API
+    //Route::get('/test-square-receipts', 'SquareClientController@get');
+    // Testing PayPeriod Generation
+    //Route::get('/pay-periods', 'PayPeriodController@generatePayPeriods');
+
+    Route::get('/pay-periods', 'PayPeriodController@payPeriod');
 });

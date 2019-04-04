@@ -2346,7 +2346,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SaleDatePicker",
   data: function data() {
@@ -2365,6 +2364,18 @@ __webpack_require__.r(__webpack_exports__);
     },
     formattedDate: function formattedDate() {
       return this.$store.getters["dateTextField"];
+    },
+    mininumAllowedDate: function mininumAllowedDate() {
+      return this.$store.getters["PayPeriods/beginDate"];
+    },
+    maximumAllowedDate: function maximumAllowedDate() {
+      return this.$store.getters["AppSettings/maximumAllowedDate"];
+    },
+    isNextDateAllowed: function isNextDateAllowed() {
+      return this.date >= this.maximumAllowedDate;
+    },
+    isPreviousDateAllowed: function isPreviousDateAllowed() {
+      return this.date <= this.mininumAllowedDate;
     }
   },
   methods: {
@@ -2583,7 +2594,7 @@ __webpack_require__.r(__webpack_exports__);
     existingTotalSaleAmount: function existingTotalSaleAmount() {
       return this.$store.getters["AddTechnicianSales/existingTotalSaleAmount"];
     },
-    hasReceipts: function hasReceipts() {
+    hasSquareReceipts: function hasSquareReceipts() {
       return this.$store.getters["Square/hasReceipts"];
     },
     convenienceFee: function convenienceFee() {
@@ -2901,6 +2912,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_SaleDatePicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/SaleDatePicker */ "./resources/js/components/SaleDatePicker.vue");
 /* harmony import */ var Components_GiftRegister__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/GiftRegister */ "./resources/js/components/GiftRegister.vue");
 /* harmony import */ var Components_TechnicianPendingSales__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/TechnicianPendingSales */ "./resources/js/components/TechnicianPendingSales.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -32694,7 +32721,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("edit")]
+                            [_vm._v("add")]
                           )
                         ],
                         1
@@ -32904,7 +32931,7 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  attrs: { icon: "" },
+                  attrs: { icon: "", disabled: _vm.isPreviousDateAllowed },
                   nativeOn: {
                     click: function($event) {
                       return _vm.goToPreviousDate(_vm.date)
@@ -32947,7 +32974,13 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("v-date-picker", {
-                    attrs: { "no-title": "", scrollable: "", actions: "" },
+                    attrs: {
+                      "no-title": "",
+                      scrollable: "",
+                      actions: "",
+                      min: _vm.mininumAllowedDate,
+                      max: _vm.maximumAllowedDate
+                    },
                     model: {
                       value: _vm.date,
                       callback: function($$v) {
@@ -32963,7 +32996,7 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  attrs: { icon: "" },
+                  attrs: { icon: "", disabled: _vm.isNextDateAllowed },
                   nativeOn: {
                     click: function($event) {
                       return _vm.goToNextDate(_vm.date)
@@ -33270,6 +33303,16 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.existingTotalSaleAmount,
+                          expression: "existingTotalSaleAmount"
+                        }
+                      ]
+                    },
                     [
                       _c("v-list-tile-content", [_vm._v("Existing Sales")]),
                       _vm._v(" "),
@@ -33286,7 +33329,7 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _vm.hasReceipts
+                  _vm.hasSquareReceipts
                     ? [
                         _c(
                           "v-list-tile",
@@ -33313,6 +33356,16 @@ var render = function() {
                         _vm._v(" "),
                         _c(
                           "v-list-tile",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.giftCardRedeem.amount > 0,
+                                expression: "giftCardRedeem.amount > 0"
+                              }
+                            ]
+                          },
                           [
                             _c("v-list-tile-content", [
                               _vm._v(_vm._s(_vm.giftCardRedeem.name))
@@ -33336,6 +33389,16 @@ var render = function() {
                         _vm._v(" "),
                         _c(
                           "v-list-tile",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.giftCardSold.amount > 0,
+                                expression: "giftCardSold.amount > 0"
+                              }
+                            ]
+                          },
                           [
                             _c("v-list-tile-content", [
                               _vm._v(_vm._s(_vm.giftCardSold.name))
@@ -34015,38 +34078,69 @@ var render = function() {
                                           _vm._v(" "),
                                           _c(
                                             "v-list",
-                                            _vm._l(_vm.technicians, function(
-                                              technician
-                                            ) {
-                                              return _c(
-                                                "v-list-tile",
-                                                {
-                                                  key: technician.id,
-                                                  on: {
-                                                    click: function($event) {
-                                                      return _vm.showNewSaleDialog(
-                                                        technician
+                                            [
+                                              _vm._l(_vm.technicians, function(
+                                                technician
+                                              ) {
+                                                return [
+                                                  _c(
+                                                    "v-list-tile",
+                                                    {
+                                                      key: technician.id,
+                                                      on: {
+                                                        click: function(
+                                                          $event
+                                                        ) {
+                                                          return _vm.showNewSaleDialog(
+                                                            technician
+                                                          )
+                                                        }
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-list-tile-avatar",
+                                                        [
+                                                          _c(
+                                                            "v-icon",
+                                                            {
+                                                              attrs: {
+                                                                large: ""
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "account_box"
+                                                              )
+                                                            ]
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-list-tile-content",
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              technician.first_name
+                                                            ) +
+                                                              " " +
+                                                              _vm._s(
+                                                                technician.last_name
+                                                              )
+                                                          )
+                                                        ]
                                                       )
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _c("v-list-tile-content", [
-                                                    _vm._v(
-                                                      _vm._s(
-                                                        technician.first_name
-                                                      ) +
-                                                        " " +
-                                                        _vm._s(
-                                                          technician.last_name
-                                                        )
-                                                    )
-                                                  ])
-                                                ],
-                                                1
-                                              )
-                                            }),
-                                            1
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("v-divider")
+                                                ]
+                                              })
+                                            ],
+                                            2
                                           )
                                         ],
                                         1
@@ -34083,22 +34177,22 @@ var render = function() {
                         [
                           _c(
                             "v-flex",
-                            { attrs: { md4: "" } },
+                            { attrs: { md6: "" } },
                             [
                               _c("sale-date-picker"),
                               _vm._v(" "),
                               _c(
                                 "v-card",
                                 [
-                                  _c("v-card-text", [
-                                    _c("span", { staticClass: "subheading" }, [
-                                      _vm._v(
-                                        "No sale data available for " +
-                                          _vm._s(_vm.friendlyDate) +
-                                          " yet, please try again later"
-                                      )
-                                    ])
-                                  ])
+                                  _c(
+                                    "v-card-text",
+                                    { staticClass: "text-md-center" },
+                                    [
+                                      _c("span", { staticClass: "headline" }, [
+                                        _vm._v("No Sales")
+                                      ])
+                                    ]
+                                  )
                                 ],
                                 1
                               )
@@ -34156,55 +34250,96 @@ var render = function() {
                   _c(
                     "v-card-text",
                     [
-                      _c("v-text-field", {
-                        directives: [
-                          {
-                            name: "validate",
-                            rawName: "v-validate",
-                            value: "required|numeric|between:1,500",
-                            expression: "'required|numeric|between:1,500'"
-                          }
+                      _c(
+                        "v-container",
+                        { attrs: { fluid: "", "grid-list-md": "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { md6: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    directives: [
+                                      {
+                                        name: "validate",
+                                        rawName: "v-validate",
+                                        value: "required|numeric|between:1,500",
+                                        expression:
+                                          "'required|numeric|between:1,500'"
+                                      }
+                                    ],
+                                    attrs: {
+                                      label: "Sale",
+                                      outline: "",
+                                      name: "sale",
+                                      "error-message": _vm.errors.collect(
+                                        "sale"
+                                      ),
+                                      "data-vv-model": "sale"
+                                    },
+                                    model: {
+                                      value: _vm.sale.amount,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.sale,
+                                          "amount",
+                                          _vm._n($$v)
+                                        )
+                                      },
+                                      expression: "sale.amount"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { md6: "" } },
+                                [
+                                  _c("v-text-field", {
+                                    directives: [
+                                      {
+                                        name: "validate",
+                                        rawName: "v-validate",
+                                        value: "numeric|between:1,500",
+                                        expression: "'numeric|between:1,500'"
+                                      }
+                                    ],
+                                    attrs: {
+                                      label: "Tip",
+                                      outline: "",
+                                      name: "tip",
+                                      "error-message": _vm.errors.collect(
+                                        "tip"
+                                      ),
+                                      "data-vv-model": "tip"
+                                    },
+                                    model: {
+                                      value: _vm.sale.tipAmount,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.sale,
+                                          "tipAmount",
+                                          _vm._n($$v)
+                                        )
+                                      },
+                                      expression: "sale.tipAmount"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
                         ],
-                        attrs: {
-                          label: "Sale",
-                          outline: "",
-                          name: "sale",
-                          "error-message": _vm.errors.collect("sale"),
-                          "data-vv-model": "sale"
-                        },
-                        model: {
-                          value: _vm.sale.amount,
-                          callback: function($$v) {
-                            _vm.$set(_vm.sale, "amount", $$v)
-                          },
-                          expression: "sale.amount"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("v-text-field", {
-                        directives: [
-                          {
-                            name: "validate",
-                            rawName: "v-validate",
-                            value: "numeric|between:1,500",
-                            expression: "'numeric|between:1,500'"
-                          }
-                        ],
-                        attrs: {
-                          label: "Tip",
-                          outline: "",
-                          name: "tip",
-                          "error-message": _vm.errors.collect("tip"),
-                          "data-vv-model": "tip"
-                        },
-                        model: {
-                          value: _vm.sale.tipAmount,
-                          callback: function($$v) {
-                            _vm.$set(_vm.sale, "tipAmount", $$v)
-                          },
-                          expression: "sale.tipAmount"
-                        }
-                      })
+                        1
+                      )
                     ],
                     1
                   ),
@@ -77985,6 +78120,30 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
 
 /***/ }),
 
+/***/ "./resources/js/services/app-setting-services.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/services/app-setting-services.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Plugins */ "./resources/js/plugins/index.js");
+
+
+var Services = new vue__WEBPACK_IMPORTED_MODULE_0___default.a();
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_1__["default"]);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getSettings: function getSettings() {
+    return Services.apiClient.get("/settings");
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/services/authentication-services.js":
 /*!**********************************************************!*\
   !*** ./resources/js/services/authentication-services.js ***!
@@ -78021,6 +78180,30 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
   },
   removeAuthentication: function removeAuthentication() {
     Services.persistentState.remove();
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/services/pay-period-services.js":
+/*!******************************************************!*\
+  !*** ./resources/js/services/pay-period-services.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var Plugins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Plugins */ "./resources/js/plugins/index.js");
+
+
+var Services = new vue__WEBPACK_IMPORTED_MODULE_0___default.a();
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_1__["default"]);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getCurrent: function getCurrent() {
+    return Services.apiClient.get("/pay-periods?filter=current");
   }
 });
 
@@ -78146,7 +78329,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     var _init = _asyncToGenerator(
     /*#__PURE__*/
     _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
-      var commit, dispatch, technicians;
+      var commit, dispatch, technicians, settings, currentPayPeriod;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -78159,11 +78342,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
             case 3:
               technicians = _context.sent;
-              commit("Technicians/SET_TECHNICIANS", technicians, {
+              _context.next = 6;
+              return dispatch("AppSettings/getSettings", null, {
                 root: true
               });
 
-            case 5:
+            case 6:
+              settings = _context.sent;
+              _context.next = 9;
+              return dispatch("PayPeriods/getCurrent", null, {
+                root: true
+              });
+
+            case 9:
+              currentPayPeriod = _context.sent;
+              commit("Technicians/SET_TECHNICIANS", technicians, {
+                root: true
+              });
+              commit("AppSettings/SET_SETTINGS", settings, {
+                root: true
+              });
+              commit("PayPeriods/SET_CURRENT", currentPayPeriod, {
+                root: true
+              });
+
+            case 13:
             case "end":
               return _context.stop();
           }
@@ -78233,7 +78436,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_update_technician_sales__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/update-technician-sales */ "./resources/js/store/modules/update-technician-sales/index.js");
 /* harmony import */ var _modules_square__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/square */ "./resources/js/store/modules/square/index.js");
 /* harmony import */ var _modules_accounts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/accounts */ "./resources/js/store/modules/accounts/index.js");
-/* harmony import */ var Plugins__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! Plugins */ "./resources/js/plugins/index.js");
+/* harmony import */ var _modules_app_settings__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/app-settings */ "./resources/js/store/modules/app-settings/index.js");
+/* harmony import */ var _modules_pay_periods__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/pay-periods */ "./resources/js/store/modules/pay-periods/index.js");
+/* harmony import */ var Plugins__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! Plugins */ "./resources/js/plugins/index.js");
 
 
 
@@ -78246,10 +78451,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
  // Plugins
 
 var Services = new vue__WEBPACK_IMPORTED_MODULE_0___default.a();
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_11__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_13__["default"]);
 
 var persistStates = function persistStates(store) {
   store.subscribe(function (mutation, state) {
@@ -78265,7 +78472,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     AddTechnicianSales: _modules_add_technician_sales__WEBPACK_IMPORTED_MODULE_7__["default"],
     UpdateTechnicianSales: _modules_update_technician_sales__WEBPACK_IMPORTED_MODULE_8__["default"],
     Square: _modules_square__WEBPACK_IMPORTED_MODULE_9__["default"],
-    Accounts: _modules_accounts__WEBPACK_IMPORTED_MODULE_10__["default"]
+    Accounts: _modules_accounts__WEBPACK_IMPORTED_MODULE_10__["default"],
+    AppSettings: _modules_app_settings__WEBPACK_IMPORTED_MODULE_11__["default"],
+    PayPeriods: _modules_pay_periods__WEBPACK_IMPORTED_MODULE_12__["default"]
   },
   state: {
     date: new Date()
@@ -78608,9 +78817,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
       return 0;
     });
   },
-  date: function date(state) {
-    return Services.$moment(state.date).format("YYYY-MM-DD");
-  },
   loading: function loading(state) {
     return state.loading;
   },
@@ -78690,6 +78896,95 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/store/modules/app-settings/actions.js":
+/*!************************************************************!*\
+  !*** ./resources/js/store/modules/app-settings/actions.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var Services_app_setting_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Services/app-setting-services */ "./resources/js/services/app-setting-services.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getSettings: function getSettings() {
+    return new Promise(function (resolve, reject) {
+      return Services_app_setting_services__WEBPACK_IMPORTED_MODULE_0__["default"].getSettings().then(function (response) {
+        resolve(response.data.settings);
+      }).catch(function (errors) {
+        reject(errors);
+      });
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/app-settings/getters.js":
+/*!************************************************************!*\
+  !*** ./resources/js/store/modules/app-settings/getters.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  maximumAllowedDate: function maximumAllowedDate(state) {
+    if (state.settings !== "") {
+      return state.settings.endDate;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/app-settings/index.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/store/modules/app-settings/index.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _getters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getters */ "./resources/js/store/modules/app-settings/getters.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "./resources/js/store/modules/app-settings/actions.js");
+/* harmony import */ var _mutations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mutations */ "./resources/js/store/modules/app-settings/mutations.js");
+
+
+
+var state = {
+  settings: ""
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: state,
+  getters: _getters__WEBPACK_IMPORTED_MODULE_0__["default"],
+  actions: _actions__WEBPACK_IMPORTED_MODULE_1__["default"],
+  mutations: _mutations__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/app-settings/mutations.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/store/modules/app-settings/mutations.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  SET_SETTINGS: function SET_SETTINGS(state, settings) {
+    state.settings = settings;
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/store/modules/authentications/actions.js":
 /*!***************************************************************!*\
   !*** ./resources/js/store/modules/authentications/actions.js ***!
@@ -78731,8 +79026,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(Plugins__WEBPACK_IMPORTED_MODULE_
     var commit = _ref2.commit;
     return Services_authentication_services__WEBPACK_IMPORTED_MODULE_1__["default"].logout().then(function (response) {
       Router__WEBPACK_IMPORTED_MODULE_2__["default"].push("logout");
-      Services.persistState.remove();
       commit("RESET_AUTHENTICATION");
+      Services.persistState.remove();
     }).catch(function (errors) {
       console.log(errors);
     });
@@ -78821,6 +79116,96 @@ __webpack_require__.r(__webpack_exports__);
   },
   RESET_AUTHENTICATION: function RESET_AUTHENTICATION(state) {
     state.authentication = "";
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/pay-periods/actions.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/store/modules/pay-periods/actions.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var Services_pay_period_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Services/pay-period-services */ "./resources/js/services/pay-period-services.js");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getCurrent: function getCurrent() {
+    return new Promise(function (resolve, reject) {
+      return Services_pay_period_services__WEBPACK_IMPORTED_MODULE_0__["default"].getCurrent().then(function (response) {
+        resolve(response.data.payPeriods);
+      }).catch(function (errors) {
+        reject(errors);
+      });
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/pay-periods/getters.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/store/modules/pay-periods/getters.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  current: function current(state) {
+    return state.currentPayPeriod;
+  },
+  beginDate: function beginDate(state) {
+    return state.currentPayPeriod.begin_date;
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/pay-periods/index.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/store/modules/pay-periods/index.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _getters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getters */ "./resources/js/store/modules/pay-periods/getters.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actions */ "./resources/js/store/modules/pay-periods/actions.js");
+/* harmony import */ var _mutations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mutations */ "./resources/js/store/modules/pay-periods/mutations.js");
+
+
+
+var state = {
+  currentPayPeriod: ""
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  namespaced: true,
+  state: state,
+  getters: _getters__WEBPACK_IMPORTED_MODULE_0__["default"],
+  actions: _actions__WEBPACK_IMPORTED_MODULE_1__["default"],
+  mutations: _mutations__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/pay-periods/mutations.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/store/modules/pay-periods/mutations.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  SET_CURRENT: function SET_CURRENT(state, payPeriod) {
+    state.currentPayPeriod = payPeriod;
   }
 });
 
@@ -79248,7 +79633,6 @@ __webpack_require__.r(__webpack_exports__);
 var state = {
   techniciansWithSale: [],
   techniciansWithNoSale: [],
-  date: new Date(),
   loading: false
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

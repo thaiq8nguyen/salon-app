@@ -29,9 +29,15 @@
 										</v-card-title>
 										<v-divider></v-divider>
 										<v-list>
-											<v-list-tile v-for="technician in technicians" :key="technician.id" @click="showNewSaleDialog(technician)">
-												<v-list-tile-content>{{ technician.first_name }}&nbsp;{{ technician.last_name }}</v-list-tile-content>
-											</v-list-tile>
+											<template v-for="technician in technicians">
+												<v-list-tile :key="technician.id" @click="showNewSaleDialog(technician)">
+													<v-list-tile-avatar>
+														<v-icon large>account_box</v-icon>
+													</v-list-tile-avatar>
+													<v-list-tile-content>{{ technician.first_name }}&nbsp;{{ technician.last_name }}</v-list-tile-content>
+												</v-list-tile>
+												<v-divider></v-divider>
+											</template>
 										</v-list>
 									</v-card>
 								</v-flex>
@@ -42,13 +48,14 @@
 						</v-flex>
 					</v-layout>
 				</v-container>
-				<v-container v-else fill-height >
+				<!-- IF no Square Receipt recorded-->
+				<v-container v-else fill-height>
 					<v-layout justify-center align-center>
-						<v-flex md4>
+						<v-flex md6>
 							<sale-date-picker></sale-date-picker>
 							<v-card>
-								<v-card-text>
-									<span class="subheading">No sale data available for {{ friendlyDate }} yet, please try again later</span>
+								<v-card-text class="text-md-center">
+									<span class="headline">No Sales</span>
 								</v-card-text>
 							</v-card>
 						</v-flex>
@@ -64,26 +71,35 @@
 				<v-divider></v-divider>
 				<v-form @submit.prevent="validate">
 					<v-card-text>
-						<v-text-field
-							v-model="sale.amount"
-							v-validate="'required|numeric|between:1,500'"
-							label="Sale"
-							outline
-							name="sale"
-							:error-message="errors.collect('sale')"
-							data-vv-model="sale"
-						>
-						</v-text-field>
-						<v-text-field
-							v-model="sale.tipAmount"
-							v-validate="'numeric|between:1,500'"
-							label="Tip"
-							outline
-							name="tip"
-							:error-message="errors.collect('tip')"
-							data-vv-model="tip"
-						>
-						</v-text-field>
+						<v-container fluid grid-list-md>
+							<v-layout row wrap>
+								<v-flex md6>
+									<v-text-field
+											v-model.number="sale.amount"
+											v-validate="'required|numeric|between:1,500'"
+											label="Sale"
+											outline
+											name="sale"
+											:error-message="errors.collect('sale')"
+											data-vv-model="sale"
+									>
+									</v-text-field>
+								</v-flex>
+								<v-flex md6>
+									<v-text-field
+											v-model.number="sale.tipAmount"
+											v-validate="'numeric|between:1,500'"
+											label="Tip"
+											outline
+											name="tip"
+											:error-message="errors.collect('tip')"
+											data-vv-model="tip"
+									>
+									</v-text-field>
+								</v-flex>
+
+							</v-layout>
+						</v-container>
 					</v-card-text>
 					<v-card-actions>
 						<v-btn @click="newSaleDialog=false">Cancel</v-btn>

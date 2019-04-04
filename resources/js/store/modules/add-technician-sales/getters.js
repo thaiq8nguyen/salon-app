@@ -105,11 +105,6 @@ export default {
 		});
 
 	},
-	date (state) {
-
-		return Services.$moment(state.date).format("YYYY-MM-DD");
-
-	},
 	loading (state) {
 
 		return state.loading;

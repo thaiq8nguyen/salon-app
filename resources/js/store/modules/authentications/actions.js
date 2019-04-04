@@ -45,9 +45,9 @@ export default {
 
 				Router.push("logout");
 
-				Services.persistState.remove();
-
 				commit("RESET_AUTHENTICATION");
+				
+				Services.persistState.remove();
 
 			})
 			.catch(errors => {

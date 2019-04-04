@@ -12,6 +12,8 @@ import AddTechnicianSales from "./modules/add-technician-sales";
 import UpdateTechnicianSales from "./modules/update-technician-sales";
 import Square from "./modules/square";
 import Accounts from "./modules/accounts";
+import AppSettings from "./modules/app-settings";
+import PayPeriods from "./modules/pay-periods";
 import Plugins from "Plugins";
 
 // Plugins
@@ -33,11 +35,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	modules: {
-		Authentications, Technicians, AddTechnicianSales, UpdateTechnicianSales, Square, Accounts,
+		Authentications, Technicians, AddTechnicianSales, UpdateTechnicianSales, Square, Accounts, AppSettings, PayPeriods,
 	},
 	state: {
 
-		date: new Date()
+		date: new Date(),
 
 	},
 	getters,

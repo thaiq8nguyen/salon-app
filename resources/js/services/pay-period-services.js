@@ -6,10 +6,10 @@ Vue.use(Plugins);
 
 export default {
 
-	get () {
+	getCurrent () {
 
-		return Services.apiClient("/account-types");
+		return Services.apiClient.get("/pay-periods?filter=current");
 
-	}
+	},
 
 };

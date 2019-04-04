@@ -4,8 +4,7 @@ import mutations from "./mutations";
 
 const state = {
 
-	technicians: "",
-	selectedTechnician: "",
+	settings: "",
 
 };
 
@@ -15,6 +14,6 @@ export default ({
 	state,
 	getters,
 	actions,
-	mutations
+	mutations,
 
 });

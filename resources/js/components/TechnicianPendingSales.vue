@@ -35,23 +35,23 @@
 				</v-card-text>
 				<v-divider></v-divider>
 				<v-list>
-					<v-list-tile>
+					<v-list-tile v-show="existingTotalSaleAmount">
 						<v-list-tile-content>Existing Sales</v-list-tile-content>
 						<v-list-tile-action>{{ $dollar.format(existingTotalSaleAmount) }}</v-list-tile-action>
 						<v-list-tile-action class="ml-3"></v-list-tile-action>
 					</v-list-tile>
-					<template v-if="hasReceipts">
+					<template v-if="hasSquareReceipts">
 						<v-list-tile>
 							<v-list-tile-content>{{ convenienceFee.name }}</v-list-tile-content>
 							<v-list-tile-action>+&nbsp;{{ $dollar.format(convenienceFee.amount) }}</v-list-tile-action>
 							<v-list-tile-action class="ml-3"></v-list-tile-action>
 						</v-list-tile>
-						<v-list-tile>
+						<v-list-tile v-show="giftCardRedeem.amount > 0">
 							<v-list-tile-content>{{ giftCardRedeem.name }}</v-list-tile-content>
 							<v-list-tile-action>-&nbsp;{{ $dollar.format(giftCardRedeem.amount) }}</v-list-tile-action>
 							<v-list-tile-action class="ml-3"></v-list-tile-action>
 						</v-list-tile>
-						<v-list-tile>
+						<v-list-tile v-show="giftCardSold.amount > 0">
 							<v-list-tile-content>{{ giftCardSold.name }}</v-list-tile-content>
 							<v-list-tile-action>+&nbsp;{{ $dollar.format(giftCardSold.amount) }}</v-list-tile-action>
 							<v-list-tile-action class="ml-3"></v-list-tile-action>
@@ -109,7 +109,7 @@ export default {
 			return this.$store.getters["AddTechnicianSales/existingTotalSaleAmount"];
 
 		},
-		hasReceipts () {
+		hasSquareReceipts () {
 
 			return this.$store.getters["Square/hasReceipts"];
 

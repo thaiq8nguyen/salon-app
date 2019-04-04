@@ -6,7 +6,6 @@ const state = {
 
 	techniciansWithSale: [],
 	techniciansWithNoSale: [],
-	date: new Date(),
 	loading: false,
 
 };

@@ -2,14 +2,13 @@
 	<div id="date-picker">
 		<v-card>
 			<v-card-title class="justify-space-between">
-				<v-btn icon @click.native="goToPreviousDate(date)">
+				<v-btn icon :disabled="isPreviousDateAllowed" @click.native="goToPreviousDate(date)">
 					<v-icon>keyboard_arrow_left</v-icon>
 				</v-btn>
 				<v-menu
 						v-model="showCalendar"
 						lazy
 						:close-on-content-click="true"
-
 						transition="scale-transition"
 						offset-y
 						full-width
@@ -27,18 +26,18 @@
 							no-title
 							scrollable
 							actions
+							:min="mininumAllowedDate"
+							:max="maximumAllowedDate"
 					>
 					</v-date-picker>
 				</v-menu>
-				<v-btn icon @click.native="goToNextDate(date)">
+				<v-btn icon :disabled="isNextDateAllowed" @click.native="goToNextDate(date)">
 					<v-icon>keyboard_arrow_right</v-icon>
 				</v-btn>
 			</v-card-title>
 		</v-card>
 	</div>
-
 </template>
-
 <script>
 export default {
 	name: "SaleDatePicker",
@@ -68,25 +67,27 @@ export default {
 			return this.$store.getters["dateTextField"];
 
 		},
+		mininumAllowedDate () {
 
-		/* mininumAllowedDate(){
+			return this.$store.getters["PayPeriods/beginDate"];
 
-			return this.$store.getters["SalesCalendar/getFormatMinimumAllowedDate"];
-		}, */
-		/* maximumAllowedDate(){
+		},
+		maximumAllowedDate () {
 
-			return this.$store.getters["SalesCalendar/getFormatMaximumAllowedDate"]
+			return this.$store.getters["AppSettings/maximumAllowedDate"];
 
-		}, */
-		/* isNextDateAllowed(){
+		},
+		isNextDateAllowed () {
 
 			return this.date >= this.maximumAllowedDate;
 
 		},
-		isPreviousDateAllowed(){
+
+		isPreviousDateAllowed () {
 
 			return this.date <= this.mininumAllowedDate;
-		}, */
+
+		},
 	},
 	methods: {
 

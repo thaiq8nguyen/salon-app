@@ -18,6 +18,7 @@ export default {
 
 		state.date = date;
 
-	}
+	},
+
 
 };

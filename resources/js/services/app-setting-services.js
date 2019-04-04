@@ -6,10 +6,10 @@ Vue.use(Plugins);
 
 export default {
 
-	get () {
+	getSettings () {
 
-		return Services.apiClient("/account-types");
+		return Services.apiClient.get("/settings");
 
-	}
+	},
 
 };

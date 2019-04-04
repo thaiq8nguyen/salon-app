@@ -180,6 +180,8 @@ return [
         App\Bookkeeping\Technician\TechnicianServiceProvider::class,
         App\Bookkeeping\TechnicianSale\TechnicianSaleServiceProvider::class,
         App\Bookkeeping\SquareReceipt\SquareReceiptServiceProvider::class,
+        App\Bookkeeping\Setting\SettingServiceProvider::class,
+        App\Bookkeeping\PayPeriod\PayPeriodServiceProvider::class,
 
     ],
 

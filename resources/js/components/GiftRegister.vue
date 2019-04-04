@@ -7,7 +7,7 @@
 			<v-divider></v-divider>
 			<v-list v-if="hasReceipts">
 				<v-list-tile>
-					<v-list-tile-avatar><v-icon @click="giftCardRedeemDialog = true">edit</v-icon></v-list-tile-avatar>
+					<v-list-tile-avatar><v-icon @click="giftCardRedeemDialog = true">add</v-icon></v-list-tile-avatar>
 					<v-list-tile-content>{{ giftCardRedeem.name }}</v-list-tile-content>
 					<v-list-tile-content class="align-end">{{ $dollar.format(giftCardRedeem.amount) }}</v-list-tile-content>
 				</v-list-tile>
