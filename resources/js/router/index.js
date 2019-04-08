@@ -18,7 +18,7 @@ router.beforeEach((to, from, next) => {
 	if (to.meta.requiresAuth) {
 
 		const state = Services.persistState.load();
-		const isAuthenticated = state.Authentications.accessToken;
+		const isAuthenticated = state.Authentications.authentication.accessToken;
 
 		if (isAuthenticated) {
 

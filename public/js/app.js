@@ -78941,7 +78941,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 router.beforeEach(function (to, from, next) {
   if (to.meta.requiresAuth) {
     var state = Services.persistState.load();
-    var isAuthenticated = state.Authentications.accessToken;
+    var isAuthenticated = state.Authentications.authentication.accessToken;
 
     if (isAuthenticated) {
       next();

@@ -2,43 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f08bc22-4422-4c10-9d74-e7ecbc88b366" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/UserSettings.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/services/user-services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/users/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/users/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/users/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/users/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/PendingRegistration.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Registration.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4addcc9b-075c-45a7-9d19-3a07b8d1e96e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4addcc9b-075c-45a7-9d19-3a07b8d1e96e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bookkeeping/User/UserInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bookkeeping/User/UserInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/SquareRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SquareRegister.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/services/authentication-services.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/authentication-services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Settings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Settings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
+            <state relative-caret-position="281">
               <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
@@ -121,20 +87,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/js/views/Login.vue">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="442">
+              <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/Login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="510">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
             </state>
           </provider>
         </entry>
@@ -142,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/router/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
+            <state relative-caret-position="214">
               <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -232,12 +201,12 @@
         <option value="$PROJECT_DIR$/resources/js/views/PendingRegistration.vue" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" />
-        <option value="$PROJECT_DIR$/resources/js/router/index.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/index.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/router/routes.js" />
+        <option value="$PROJECT_DIR$/resources/js/router/index.js" />
         <option value="$PROJECT_DIR$/resources/js/views/Login.vue" />
       </list>
     </option>
@@ -582,17 +551,18 @@
       <workItem from="1554264670262" duration="13000" />
       <workItem from="1554305565462" duration="67839000" />
       <workItem from="1554619382361" duration="108000" />
-      <workItem from="1554662066697" duration="10838000" />
+      <workItem from="1554662066697" duration="11506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426867000" />
+    <option name="totallyTimeSpent" value="427535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11318507" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11318507" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -605,7 +575,7 @@
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32997987" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32997987" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.14788732" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30784708" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32997987" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -921,29 +891,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#1#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -975,10 +928,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -992,19 +945,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/router/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
+        <state relative-caret-position="214">
           <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -1012,10 +955,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/views/Login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="510">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
