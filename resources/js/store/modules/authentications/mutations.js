@@ -1,11 +1,5 @@
 export default {
 
-	SET_IS_AUTHENTICATING (state, value) {
-
-		state.isAuthenticating = value;
-
-	},
-
 	SET_AUTHENTICATION (state, authentication) {
 
 		state.authentication = authentication;
@@ -23,4 +17,5 @@ export default {
 		state.authentication = "";
 
 	},
+
 };

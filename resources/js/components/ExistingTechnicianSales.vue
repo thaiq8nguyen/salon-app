@@ -24,6 +24,16 @@
 				</v-data-table>
 			</v-card-text>
 		</v-card>
+		<v-card v-else>
+			<v-card-title>
+				<span class="title">No Technician Sales Entered</span>
+			</v-card-title>
+			<v-divider></v-divider>
+			<v-card-text>
+				<span class="subheading">You can enter the technician sales by clicking the button below</span><br>
+				<v-btn to="add-technician-sales">Add Technician Sales</v-btn>
+			</v-card-text>
+		</v-card>
 		<v-dialog v-model="updateDialog" :max-width="500">
 			<v-card>
 				<v-card-title>

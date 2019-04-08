@@ -74,7 +74,7 @@
 				</v-card-text>
 			</v-card-text>
 			<v-card-actions>
-				<v-btn :disabled="!technicianSales.length" @click="deleteAllPendingSales">Clear</v-btn>
+				<v-btn :disabled="!technicianSales.length" @click="deleteAllPendingSales">Delete All</v-btn>
 				<v-spacer></v-spacer>
 				<v-btn class="info" :disabled="!technicianSales.length" @click="upload">Submit</v-btn>
 			</v-card-actions>
@@ -157,15 +157,19 @@ export default {
 		summary () {
 
 			let style = {};
-			if (this.isMatched) {
+			if (this.technicianSales.length > 0) {
 
-				style.result = "Match";
-				style.class = "text-md-center white--text success";
+				if (this.isMatched) {
 
-			} else {
+					style.result = "Match";
+					style.class = "text-md-center white--text success";
 
-				style.result = "No Match " + this.$dollar.format(this.netTotalTechnicianSaleAmount - this.squareTotalCollected);
-				style.class = "text-md-center white--text warning";
+				} else {
+
+					style.result = "No Match " + this.$dollar.format(this.netTotalTechnicianSaleAmount - this.squareTotalCollected);
+					style.class = "text-md-center white--text warning";
+
+				}
 
 			}
 			return style;
@@ -174,8 +178,11 @@ export default {
 		netTotalStyle () {
 
 			return {
-				"warning white--text subheading": !this.isMatched
-			}
+
+				"warning white--text subheading": !this.isMatched && this.technicianSales.length > 0
+
+			};
+
 		}
 
 	},

@@ -10,6 +10,7 @@ export default {
 
 		this.replaceState(
 			Object.assign(state, Services.persistState.load())
+
 		);
 
 	},
@@ -19,6 +20,5 @@ export default {
 		state.date = date;
 
 	},
-
 
 };

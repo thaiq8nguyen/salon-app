@@ -3,8 +3,8 @@ import Vue from "vue";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import colors from "vuetify/es5/util/colors";
-import store from "./store";
-import router from "./router";
+import store from "Store";
+import router from "Router";
 import Plugins from "Plugins";
 import VeeValidate from "vee-validate";
 
@@ -42,5 +42,6 @@ const app = new Vue({
 	store,
 	router,
 	components: { App },
-	template: "<App/>"
+	template: "<App/>",
+
 });

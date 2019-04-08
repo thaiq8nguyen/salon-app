@@ -1,8 +1,4 @@
-import Vue from "vue";
-import Plugins from "Plugins";
-
-let Services = new Vue();
-Vue.use(Plugins);
+// UPDATE TECHNICIAN SALES
 
 export default {
 

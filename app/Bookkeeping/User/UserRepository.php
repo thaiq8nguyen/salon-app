@@ -11,11 +11,19 @@ class UserRepository implements UserInterface
     public function login($credential)
     {
         if (Auth::attempt(['email' => $credential['email'], 'password' => $credential['password']])) {
+            if (!Auth::user()->approved_at) {
+                $result = [
+                    'approved' => false,
+                    'message' => 'Your registration is pending. Once it has approved, you may access the application'
+                ];
+                return $result;
+            }
             $user = Auth::user();
             $token = $user->createToken('access');
 
             $result = [
-                "accessToken" => $token->accessToken,
+                'approved' => true,
+                'accessToken' => $token->accessToken,
                 'expiration' => Carbon::parse($token->token->expires_at)->toDateTimeString(),
                 'userFullName' => $user->name
             ];
@@ -36,7 +44,33 @@ class UserRepository implements UserInterface
         return false;
     }
 
-    public function user()
+    public function register($user)
     {
+        $user = User::create([
+            'name' => $user['firstName'].' '.$user['lastName'],
+            'email' => $user['email'],
+            'password' => bcrypt($user['password'])]);
+
+        return $user;
+    }
+
+    public function getUnApprovedUsers()
+    {
+        $users = User::whereNull('approved_at')->get();
+
+        return $users;
+    }
+
+    public function approveUser($userID)
+    {
+        $user = User::find($userID);
+
+        $time = Carbon::now();
+
+        $user->approved_at = $time->toDateTimeString();
+
+        $user->save();
+
+        return $user;
     }
 }

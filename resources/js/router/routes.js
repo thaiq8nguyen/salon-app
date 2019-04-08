@@ -1,4 +1,6 @@
 import Login from "Views/Login";
+import Registration from "Views/Registration";
+import PendingRegistration from "Views/PendingRegistration";
 import Dashboard from "Views/Dashboard";
 import AddTechnicianSales from "Views/AddTechnicianSales";
 import UpdateTechnicianSales from "Views/UpdateTechnicianSales";
@@ -16,11 +18,22 @@ const routes = [
 		redirect: "/login"
 	},
 	{
+		name: "Registration",
+		path: "/registration",
+		component: Registration
+	},
+	{
+		name: "Pending Registration Approval",
+		path: "/pending-registration",
+		component: PendingRegistration,
+	},
+	{
 		name: "Dashboard",
 		path: "/dashboard",
 		component: Dashboard,
 		meta: {
-			title: "Dashboard"
+			title: "Dashboard",
+			requiresAuth: true,
 		}
 	},
 	{
@@ -28,7 +41,8 @@ const routes = [
 		path: "/add-technician-sales",
 		component: AddTechnicianSales,
 		meta: {
-			title: "Add Technician Sales"
+			title: "Add Technician Sales",
+			requiresAuth: true,
 		}
 	},
 	{
@@ -36,7 +50,8 @@ const routes = [
 		path: "/update-technician-sales",
 		component: UpdateTechnicianSales,
 		meta: {
-			title: "Update Technician Sales"
+			title: "Update Technician Sales",
+			requiresAuth: true,
 		}
 	},
 	{

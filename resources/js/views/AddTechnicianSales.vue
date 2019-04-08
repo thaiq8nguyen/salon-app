@@ -3,6 +3,15 @@
 		<v-app>
 			<top-navigation-bar :title="title"></top-navigation-bar>
 			<v-content>
+				<v-alert
+					v-if="hasSquareReceipts"
+					:value="alert.show"
+					dismissible
+					:type="alert.type"
+					class="text-md-center"
+				>
+					<span class="title">{{ alert.message }}</span>
+				</v-alert>
 				<v-container v-if="hasSquareReceipts" fluid grid-list-md>
 					<v-layout row wrap>
 						<v-flex md3>
@@ -24,8 +33,6 @@
 									<v-card>
 										<v-card-title>
 											<span class="title">Technicians</span>
-											<v-spacer></v-spacer>
-											<span v-if="hasNoExistingTechnicianSales">There are no existing technician sales</span>
 										</v-card-title>
 										<v-divider></v-divider>
 										<v-list>
@@ -97,7 +104,6 @@
 									>
 									</v-text-field>
 								</v-flex>
-
 							</v-layout>
 						</v-container>
 					</v-card-text>
@@ -194,6 +200,46 @@ export default {
 			return this.$store.getters["dateTextField"];
 
 		},
+		isMatched () {
+
+			return this.$store.getters["AddTechnicianSales/isTechnicianSalesAndSquareMatched"];
+
+		},
+		alert () {
+
+			let config = "";
+			if (this.hasNoExistingTechnicianSales) {
+
+				config = {
+					show: true,
+					message: "Enter Technician Sales",
+					type: "warning"
+				};
+
+			} else {
+
+				if (this.isMatched) {
+
+					config = {
+						show: true,
+						message: "Technician Sales Have Been Entered and Matched With Square",
+						type: "success"
+					};
+
+				} else {
+
+					config = {
+						show: true,
+						message: "Technician Sales Have Been Entered but Do Not Matched With Square ",
+						type: "warning"
+					};
+
+				}
+
+			}
+			return config;
+
+		}
 
 	},
 	watch: {

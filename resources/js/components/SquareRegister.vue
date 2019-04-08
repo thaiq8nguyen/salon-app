@@ -81,6 +81,11 @@ export default {
 			return this.$store.getters["AddTechnicianSales/isTechnicianSalesAndSquareMatched"];
 
 		},
+		hasNoExistingTechnicianSales () {
+
+			return this.$store.getters["AddTechnicianSales/hasNoExistingTechnicianSales"];
+
+		},
 		totalCollectedStyle () {
 
 			return {

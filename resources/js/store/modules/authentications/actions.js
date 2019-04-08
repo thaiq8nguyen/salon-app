@@ -1,8 +1,7 @@
 import Vue from "vue";
 import AuthenticationServices from "Services/authentication-services";
-import Router from "Router";
 import Plugins from "Plugins";
-
+import Router from "Router";
 let Services = new Vue();
 Vue.use(Plugins);
 
@@ -10,31 +9,36 @@ export default {
 
 	login ({ commit }, credential) {
 
-		commit("SET_IS_AUTHENTICATING", true);
 
-		return AuthenticationServices.login(credential)
-			.then(response => {
+		return new Promise((resolve, reject) => {
 
-				commit("SET_AUTHENTICATION", response.data.user);
+			return AuthenticationServices.login(credential)
+				.then(response => {
 
-				Router.push("dashboard");
+					if (response.data.user.approved) {
 
-			})
-			.catch(errors => {
+						commit("SET_AUTHENTICATION", response.data.user);
+						resolve(true);
 
-				if (errors.response.status === 401) {
+					} else {
 
-					commit("SET_ERROR_MESSAGE", errors.response.data.message);
+						resolve(false);
 
-				}
-				Services.persistState.remove();
+					}
 
-			})
-			.then(() => {
+				})
+				.catch(errors => {
 
-				commit("SET_IS_AUTHENTICATING", false);
+					if (errors.response.status === 401) {
 
-			});
+						reject(errors.response.data.message);
+
+					}
+					Services.persistState.remove();
+
+				});
+
+		});
 
 	},
 
@@ -46,7 +50,7 @@ export default {
 				Router.push("logout");
 
 				commit("RESET_AUTHENTICATION");
-				
+
 				Services.persistState.remove();
 
 			})
@@ -55,6 +59,26 @@ export default {
 				console.log(errors);
 
 			});
+
+	},
+
+	register ({ commit }, user) {
+
+		return new Promise((resolve, reject) => {
+
+			return AuthenticationServices.register(user)
+				.then(response => {
+
+					resolve(response.data.user);
+
+				})
+				.catch(errors => {
+
+					reject(errors);
+
+				});
+
+		});
 
 	}
 };

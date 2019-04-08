@@ -11,6 +11,9 @@
 						<v-flex md3>
 							<account-settings></account-settings>
 						</v-flex>
+						<v-flex md3>
+							<user-settings></user-settings>
+						</v-flex>
 					</v-layout>
 				</v-container>
 			</v-content>
@@ -22,10 +25,11 @@
 import TopNavigationBar from "Components/TopNavigationBar";
 import TechnicianSettings from "Components/TechnicianSettings";
 import AccountSettings from "Components/AccountSettings";
+import UserSettings from "Components/UserSettings";
 
 export default {
 	name: "Settings",
-	components: { TopNavigationBar, TechnicianSettings, AccountSettings },
+	components: { TopNavigationBar, TechnicianSettings, AccountSettings, UserSettings },
 
 	data () {
 

@@ -32,8 +32,8 @@
 										>
 										</v-text-field>
 									</v-card-text>
-									<v-card-text v-if="errorMessage">
-										<p class="danger--text">{{ errorMessage }}</p>
+									<v-card-text v-if="authenticationErrors">
+										<span class="danger--text">{{ authenticationErrors }}</span>
 									</v-card-text>
 									<v-card-actions>
 										<v-spacer></v-spacer>
@@ -55,6 +55,10 @@ export default {
 	data () {
 
 		return {
+			defaultCredential: {
+				email: "",
+				password: "",
+			},
 			credential: {
 				email: "",
 				password: ""
@@ -69,23 +73,14 @@ export default {
 					},
 				}
 			},
+			isAuthenticating: false,
+			authenticationErrors: "",
 
 		};
 
 	},
 	computed: {
 
-		isAuthenticating () {
-
-			return this.$store.getters["Authentications/isAuthenticating"];
-
-		},
-
-		errorMessage () {
-
-			return this.$store.getters["Authentications/errorMessage"];
-
-		}
 	},
 	created () {
 
@@ -106,9 +101,35 @@ export default {
 			});
 
 		},
-		login (){
+		login () {
 
-			this.$store.dispatch("Authentications/login", this.credential);
+			this.isAuthenticating = true;
+			this.$store.dispatch("Authentications/login", this.credential)
+				.then(approved => {
+
+					if (approved) {
+
+						this.$router.push("dashboard");
+
+					} else {
+
+						this.$router.push("pending-registration");
+
+					}
+
+				})
+				.catch(errors => {
+
+					this.authenticationErrors = errors;
+
+				})
+				.then(() => {
+
+					this.credential = Object.assign({}, this.defaultCredential);
+					this.$validator.reset();
+					this.isAuthenticating = false;
+
+				});
 
 		}
 	},

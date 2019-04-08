@@ -1,12 +1,12 @@
-// AUTHENTICATIONS
+// Users
+
 import getters from "./getters";
 import actions from "./actions";
 import mutations from "./mutations";
 
 const state = {
 
-	authentication: "",
-	errorMessage: "",
+	unApprovedUsers: "",
 
 };
 export default ({

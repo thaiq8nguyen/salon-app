@@ -15,6 +15,7 @@
 										<v-card-title>
 											<span class="title">Summary</span>
 										</v-card-title>
+										<v-divider></v-divider>
 										<v-list>
 											<v-list-tile>
 												<v-list-tile-content>Technician Sale Total</v-list-tile-content>

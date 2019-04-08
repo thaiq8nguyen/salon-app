@@ -3,8 +3,7 @@
 		<v-app>
 			<top-navigation-bar :title="title"></top-navigation-bar>
 			<v-content>
-				<v-card>
-				</v-card>
+				<v-card></v-card>
 			</v-content>
 		</v-app>
 	</div>

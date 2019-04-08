@@ -20,7 +20,6 @@ export default {
 
 		}
 
-
 	},
 
 	login (credential) {
@@ -35,11 +34,18 @@ export default {
 
 	},
 
-	user () {
+	register (user) {
 
-		return Services.apiClient.get("/user");
+		return Services.apiClient.post("/register", user);
 
 	},
+
+	checkApproved () {
+
+		return Services.apiClient.get("/check-approved");
+
+	},
+
 	removeAuthentication () {
 
 		Services.persistentState.remove();

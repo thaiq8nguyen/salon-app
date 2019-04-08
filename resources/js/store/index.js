@@ -14,6 +14,7 @@ import Square from "./modules/square";
 import Accounts from "./modules/accounts";
 import AppSettings from "./modules/app-settings";
 import PayPeriods from "./modules/pay-periods";
+import Users from "./modules/users";
 import Plugins from "Plugins";
 
 // Plugins
@@ -35,7 +36,15 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
 	modules: {
-		Authentications, Technicians, AddTechnicianSales, UpdateTechnicianSales, Square, Accounts, AppSettings, PayPeriods,
+		Authentications,
+		Technicians,
+		AddTechnicianSales,
+		UpdateTechnicianSales,
+		Square,
+		Accounts,
+		AppSettings,
+		PayPeriods,
+		Users,
 	},
 	state: {
 
