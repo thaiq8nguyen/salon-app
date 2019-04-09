@@ -30,7 +30,6 @@
 				<span class="headline">No Sales Available</span>
 			</v-card-text>
 		</v-card>
-
 	</div>
 </template>
 
@@ -76,6 +75,7 @@ export default {
 			return this.$store.getters["Square/loading"];
 
 		},
+		// check for technician sales and square sales matched
 		isMatched () {
 
 			return this.$store.getters["AddTechnicianSales/isTechnicianSalesAndSquareMatched"];
@@ -88,11 +88,27 @@ export default {
 		},
 		totalCollectedStyle () {
 
-			return {
+			let style = "";
 
-				"warning white--text subheading": !this.isMatched
+			if (this.hasNoExistingTechnicianSales) {
 
-			};
+				style = "warning white--text subheading";
+
+			} else {
+
+				if (this.isMatched) {
+
+					style = "success white--text subheading";
+
+				} else {
+
+					style = "info white--text subheading";
+
+				}
+
+			}
+
+			return style;
 
 		},
 	},

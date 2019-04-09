@@ -37,7 +37,7 @@
 		<v-dialog v-model="updateDialog" :max-width="500">
 			<v-card>
 				<v-card-title>
-					<span class="title">{{ updateSale.firstName }} &nbsp; {{ updateSale.lastName }}</span>
+					<span class="title">{{ updateSale.firstName }}&nbsp;{{ updateSale.lastName }}</span>
 					<v-spacer></v-spacer>
 					<v-btn icon @click="updateDialog = false"><v-icon>close</v-icon></v-btn>
 				</v-card-title>
@@ -170,9 +170,14 @@ export default {
 			return this.$store.getters["UpdateTechnicianSales/techniciansWithNoSale"];
 
 		},
+		existingSaleTotal () {
+
+			return this.$store.getters["UpdateTechnicianSales/technicianSaleTotal"];
+
+		},
 		loading () {
 
-			return this.$store.getters["AddTechnicianSales/loading"];
+			return this.$store.getters["UpdateTechnicianSales/loading"];
 
 		}
 
@@ -223,7 +228,6 @@ export default {
 			this.$store.dispatch("UpdateTechnicianSales/updateExistingSale", this.updateSale)
 				.then(response => {
 
-					console.log(response);
 					this.updateSale = Object.assign({}, this.defaultSale);
 					this.updateDialog = false;
 

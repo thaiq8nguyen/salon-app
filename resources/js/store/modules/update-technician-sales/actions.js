@@ -61,7 +61,6 @@ export default {
 
 					resolve(response.data.success);
 					dispatch("getTechniciansWithSale");
-					commit("SET_LOADING", false);
 
 				})
 				.catch(errors => {
@@ -71,6 +70,8 @@ export default {
 
 				})
 				.then(() => {
+
+					commit("SET_LOADING", false);
 
 				});
 
@@ -85,7 +86,6 @@ export default {
 
 				dispatch("getTechniciansWithSale");
 				dispatch("getTechniciansWithNoSale");
-				commit("SET_LOADING", false);
 
 			})
 			.catch(errors => {
@@ -94,6 +94,8 @@ export default {
 
 			})
 			.then(() => {
+
+				commit("SET_LOADING", false);
 
 			});
 

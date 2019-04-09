@@ -2124,8 +2124,11 @@ __webpack_require__.r(__webpack_exports__);
     techniciansWithNoSale: function techniciansWithNoSale() {
       return this.$store.getters["UpdateTechnicianSales/techniciansWithNoSale"];
     },
+    existingSaleTotal: function existingSaleTotal() {
+      return this.$store.getters["UpdateTechnicianSales/technicianSaleTotal"];
+    },
     loading: function loading() {
-      return this.$store.getters["AddTechnicianSales/loading"];
+      return this.$store.getters["UpdateTechnicianSales/loading"];
     }
   },
   mounted: function mounted() {
@@ -2160,7 +2163,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.$store.dispatch("UpdateTechnicianSales/updateExistingSale", this.updateSale).then(function (response) {
-        console.log(response);
         _this2.updateSale = Object.assign({}, _this2.defaultSale);
         _this2.updateDialog = false;
       }).catch(function (errors) {});
@@ -2441,7 +2443,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "SquareRegister",
   data: function data() {
@@ -2466,6 +2467,7 @@ __webpack_require__.r(__webpack_exports__);
     loading: function loading() {
       return this.$store.getters["Square/loading"];
     },
+    // check for technician sales and square sales matched
     isMatched: function isMatched() {
       return this.$store.getters["AddTechnicianSales/isTechnicianSalesAndSquareMatched"];
     },
@@ -2473,9 +2475,19 @@ __webpack_require__.r(__webpack_exports__);
       return this.$store.getters["AddTechnicianSales/hasNoExistingTechnicianSales"];
     },
     totalCollectedStyle: function totalCollectedStyle() {
-      return {
-        "warning white--text subheading": !this.isMatched
-      };
+      var style = "";
+
+      if (this.hasNoExistingTechnicianSales) {
+        style = "warning white--text subheading";
+      } else {
+        if (this.isMatched) {
+          style = "success white--text subheading";
+        } else {
+          style = "info white--text subheading";
+        }
+      }
+
+      return style;
     }
   },
   mounted: function mounted() {
@@ -3196,7 +3208,7 @@ __webpack_require__.r(__webpack_exports__);
           config = {
             show: true,
             message: "Technician Sales Have Been Entered but Do Not Matched With Square ",
-            type: "warning"
+            type: "info"
           };
         }
       }
@@ -32734,7 +32746,7 @@ var render = function() {
                   _c("span", { staticClass: "title" }, [
                     _vm._v(
                       _vm._s(_vm.updateSale.firstName) +
-                        "   " +
+                        " " +
                         _vm._s(_vm.updateSale.lastName)
                     )
                   ]),
@@ -34570,7 +34582,8 @@ var render = function() {
                                             "v-list",
                                             [
                                               _vm._l(_vm.technicians, function(
-                                                technician
+                                                technician,
+                                                key
                                               ) {
                                                 return [
                                                   _c(
@@ -34618,7 +34631,7 @@ var render = function() {
                                                     1
                                                   ),
                                                   _vm._v(" "),
-                                                  _c("v-divider")
+                                                  _c("v-divider", { key: key })
                                                 ]
                                               })
                                             ],
@@ -35740,7 +35753,7 @@ var render = function() {
                                             "v-list-tile",
                                             [
                                               _c("v-list-tile-content", [
-                                                _vm._v("Technician Sale Total")
+                                                _vm._v("Existing Sale Total")
                                               ]),
                                               _vm._v(" "),
                                               _c(
@@ -80563,11 +80576,12 @@ __webpack_require__.r(__webpack_exports__);
       return Services_technician_sale_services__WEBPACK_IMPORTED_MODULE_0__["default"].updateExistingSale(updatedSale).then(function (response) {
         resolve(response.data.success);
         dispatch("getTechniciansWithSale");
-        commit("SET_LOADING", false);
       }).catch(function (errors) {
         reject(errors.response.status);
         console.log(errors);
-      }).then(function () {});
+      }).then(function () {
+        commit("SET_LOADING", false);
+      });
     });
   },
   deleteExistingSale: function deleteExistingSale(_ref6, saleID) {
@@ -80577,10 +80591,11 @@ __webpack_require__.r(__webpack_exports__);
     return Services_technician_sale_services__WEBPACK_IMPORTED_MODULE_0__["default"].deleteExistingSale(saleID).then(function (response) {
       dispatch("getTechniciansWithSale");
       dispatch("getTechniciansWithNoSale");
-      commit("SET_LOADING", false);
     }).catch(function (errors) {
       console.log(errors);
-    }).then(function () {});
+    }).then(function () {
+      commit("SET_LOADING", false);
+    });
   }
 });
 
@@ -80667,6 +80682,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   SET_DATE: function SET_DATE(state, date) {
     state.date = date;
+  },
+  SET_LOADING: function SET_LOADING(state, value) {
+    state.loading = value;
   }
 });
 

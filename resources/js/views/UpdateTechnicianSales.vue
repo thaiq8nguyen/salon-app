@@ -18,7 +18,7 @@
 										<v-divider></v-divider>
 										<v-list>
 											<v-list-tile>
-												<v-list-tile-content>Technician Sale Total</v-list-tile-content>
+												<v-list-tile-content>Existing Sale Total</v-list-tile-content>
 												<v-list-tile-content class="align-end">{{ $dollar.format(technicianSaleTotal) }}</v-list-tile-content>
 											</v-list-tile>
 											<v-list-tile>

@@ -5,6 +5,8 @@ namespace App\Bookkeeping\TechnicianSale;
 use App\Technician;
 use App\TechnicianSale;
 
+use App\Events\TechnicianSalesAddedEvent;
+
 class TechnicianSaleRepository implements TechnicianSaleInterface
 {
     public function getTechniciansWithSale($date)
@@ -15,7 +17,7 @@ class TechnicianSaleRepository implements TechnicianSaleInterface
             $query->where('date', $date);
         })->orderBy('first_name', 'asc')->get();
 
-        return $technicianSales->makeHidden(['phone', 'email']);
+        return $technicianSales->makeHidden(['phone', 'email', 'technician_image']);
     }
 
     public function getTechniciansWithNoSale($date)
@@ -35,6 +37,11 @@ class TechnicianSaleRepository implements TechnicianSaleInterface
                 'sale_amount' => $sale['amount'], 'tip_amount' => $sale['tipAmount']]);
 
         }
+
+        $newTechnicianSales = $this->getTechniciansWithSale($sales['date']);
+
+        event(new TechnicianSalesAddedEvent($newTechnicianSales));
+
         return 'success';
     }
 

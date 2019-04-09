@@ -64,9 +64,9 @@ class TechnicianSaleController extends BaseController
     public function update(Request $request)
     {
         $validation = Validator::make($request->all(), [
-            'id' => 'required|exists:technician_sales,id',
+            'saleID' => 'required|exists:technician_sales,id',
             'saleAmount' => 'required|numeric|between:1,500',
-            'tipAmount' => 'numeric|between:0,200'
+            'tipAmount' => 'numeric|between:0,500'
         ]);
 
         if ($validation->fails()) {

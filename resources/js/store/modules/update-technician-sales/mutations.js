@@ -15,5 +15,10 @@ export default {
 		state.date = date;
 
 	},
+	SET_LOADING (state, value) {
+
+		state.loading = value;
+
+	},
 
 };
