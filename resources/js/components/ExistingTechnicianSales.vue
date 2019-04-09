@@ -2,7 +2,7 @@
 	<div id="existing-technician-sales">
 		<v-card v-if="techniciansWithSale.length">
 			<v-card-title>
-				<span class="title">Existing Sales</span>
+				<span class="title">Existing Technician Sales</span>
 				<v-spacer></v-spacer>
 			</v-card-title>
 			<v-divider></v-divider>

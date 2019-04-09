@@ -3,7 +3,7 @@
 		<v-app>
 			<top-navigation-bar :title="title"></top-navigation-bar>
 			<v-content>
-				<v-container grid-list-md fluid>
+				<v-container v-if="hasSquareReceipts" grid-list-md fluid>
 					<v-layout row wrap>
 						<v-flex md3>
 							<sale-date-picker></sale-date-picker>
@@ -18,7 +18,7 @@
 										<v-divider></v-divider>
 										<v-list>
 											<v-list-tile>
-												<v-list-tile-content>Existing Sale Total</v-list-tile-content>
+												<v-list-tile-content>Existing Technician Sale Total</v-list-tile-content>
 												<v-list-tile-content class="align-end">{{ $dollar.format(technicianSaleTotal) }}</v-list-tile-content>
 											</v-list-tile>
 											<v-list-tile>
@@ -54,6 +54,18 @@
 									<existing-technician-sales></existing-technician-sales>
 								</v-flex>
 							</v-layout>
+						</v-flex>
+					</v-layout>
+				</v-container>
+				<v-container v-else fill-height>
+					<v-layout justify-center align-center>
+						<v-flex md6>
+							<sale-date-picker></sale-date-picker>
+							<v-card>
+								<v-card-text class="text-md-center">
+									<span class="headline">No Sales</span>
+								</v-card-text>
+							</v-card>
 						</v-flex>
 					</v-layout>
 				</v-container>
@@ -119,9 +131,15 @@ export default {
 			return this.$store.getters["Square/giftCardSold"];
 
 		},
+		hasSquareReceipt () {
+
+			return this.$store.getters["Square/hasReceipts"];
+
+		},
 		summary () {
 
 			let style = {};
+
 			if (this.netTechnicianSaleTotal === this.squareTotalCollected) {
 
 				style.message = "Match";

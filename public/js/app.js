@@ -3807,6 +3807,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3846,6 +3858,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     giftCardSold: function giftCardSold() {
       return this.$store.getters["Square/giftCardSold"];
+    },
+    hasSquareReceipt: function hasSquareReceipt() {
+      return this.$store.getters["Square/hasReceipts"];
     },
     summary: function summary() {
       var style = {};
@@ -32566,7 +32581,7 @@ var render = function() {
                 "v-card-title",
                 [
                   _c("span", { staticClass: "title" }, [
-                    _vm._v("Existing Sales")
+                    _vm._v("Existing Technician Sales")
                   ]),
                   _vm._v(" "),
                   _c("v-spacer")
@@ -35708,243 +35723,271 @@ var render = function() {
           _c(
             "v-content",
             [
-              _c(
-                "v-container",
-                { attrs: { "grid-list-md": "", fluid: "" } },
-                [
-                  _c(
-                    "v-layout",
-                    { attrs: { row: "", wrap: "" } },
+              _vm.hasSquareReceipts
+                ? _c(
+                    "v-container",
+                    { attrs: { "grid-list-md": "", fluid: "" } },
                     [
                       _c(
-                        "v-flex",
-                        { attrs: { md3: "" } },
-                        [_c("sale-date-picker")],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { staticClass: "mt-5", attrs: { md12: "" } },
+                        "v-layout",
+                        { attrs: { row: "", wrap: "" } },
                         [
                           _c(
-                            "v-layout",
-                            { attrs: { row: "", wrap: "" } },
+                            "v-flex",
+                            { attrs: { md3: "" } },
+                            [_c("sale-date-picker")],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { staticClass: "mt-5", attrs: { md12: "" } },
                             [
                               _c(
-                                "v-flex",
-                                { attrs: { md3: "" } },
+                                "v-layout",
+                                { attrs: { row: "", wrap: "" } },
                                 [
                                   _c(
-                                    "v-card",
+                                    "v-flex",
+                                    { attrs: { md3: "" } },
                                     [
-                                      _c("v-card-title", [
-                                        _c("span", { staticClass: "title" }, [
-                                          _vm._v("Summary")
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("v-divider"),
-                                      _vm._v(" "),
                                       _c(
-                                        "v-list",
+                                        "v-card",
                                         [
-                                          _c(
-                                            "v-list-tile",
-                                            [
-                                              _c("v-list-tile-content", [
-                                                _vm._v("Existing Sale Total")
-                                              ]),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-list-tile-content",
-                                                { staticClass: "align-end" },
-                                                [
-                                                  _vm._v(
-                                                    _vm._s(
-                                                      _vm.$dollar.format(
-                                                        _vm.technicianSaleTotal
-                                                      )
-                                                    )
-                                                  )
-                                                ]
-                                              )
-                                            ],
-                                            1
-                                          ),
+                                          _c("v-card-title", [
+                                            _c(
+                                              "span",
+                                              { staticClass: "title" },
+                                              [_vm._v("Summary")]
+                                            )
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("v-divider"),
                                           _vm._v(" "),
                                           _c(
-                                            "v-list-tile",
+                                            "v-list",
                                             [
-                                              _c("v-list-tile-content", [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.convenienceFee.name
-                                                  )
-                                                )
-                                              ]),
-                                              _vm._v(" "),
                                               _c(
-                                                "v-list-tile-content",
-                                                { staticClass: "align-end" },
+                                                "v-list-tile",
                                                 [
-                                                  _vm._v(
-                                                    "+  " +
-                                                      _vm._s(
-                                                        _vm.$dollar.format(
-                                                          _vm.convenienceFee
-                                                            .amount
+                                                  _c("v-list-tile-content", [
+                                                    _vm._v(
+                                                      "Existing Technician Sale Total"
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-list-tile-content",
+                                                    {
+                                                      staticClass: "align-end"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(
+                                                          _vm.$dollar.format(
+                                                            _vm.technicianSaleTotal
+                                                          )
                                                         )
                                                       )
+                                                    ]
                                                   )
-                                                ]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-tile",
-                                            [
-                                              _c("v-list-tile-content", [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.giftCardRedeem.name
-                                                  )
-                                                )
-                                              ]),
+                                                ],
+                                                1
+                                              ),
                                               _vm._v(" "),
                                               _c(
-                                                "v-list-tile-content",
-                                                { staticClass: "align-end" },
+                                                "v-list-tile",
                                                 [
-                                                  _vm._v(
-                                                    "- " +
+                                                  _c("v-list-tile-content", [
+                                                    _vm._v(
                                                       _vm._s(
-                                                        _vm.$dollar.format(
-                                                          _vm.giftCardRedeem
-                                                            .amount
-                                                        )
-                                                      )
-                                                  )
-                                                ]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-tile",
-                                            [
-                                              _c("v-list-tile-content", [
-                                                _vm._v(
-                                                  _vm._s(_vm.giftCardSold.name)
-                                                )
-                                              ]),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-list-tile-content",
-                                                { staticClass: "align-end" },
-                                                [
-                                                  _vm._v(
-                                                    "+ " +
-                                                      _vm._s(
-                                                        _vm.$dollar.format(
-                                                          _vm.giftCardSold
-                                                            .amount
-                                                        )
-                                                      )
-                                                  )
-                                                ]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c("v-divider", {
-                                            attrs: { inset: "" }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-tile",
-                                            [
-                                              _c("v-list-tile-content", [
-                                                _vm._v(
-                                                  "Net Technician Sale Total"
-                                                )
-                                              ]),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-list-tile-content",
-                                                { staticClass: "align-end" },
-                                                [
-                                                  _vm._v(
-                                                    _vm._s(
-                                                      _vm.$dollar.format(
-                                                        _vm.netTechnicianSaleTotal
+                                                        _vm.convenienceFee.name
                                                       )
                                                     )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-list-tile-content",
+                                                    {
+                                                      staticClass: "align-end"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "+  " +
+                                                          _vm._s(
+                                                            _vm.$dollar.format(
+                                                              _vm.convenienceFee
+                                                                .amount
+                                                            )
+                                                          )
+                                                      )
+                                                    ]
                                                   )
-                                                ]
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-tile",
+                                                [
+                                                  _c("v-list-tile-content", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        _vm.giftCardRedeem.name
+                                                      )
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-list-tile-content",
+                                                    {
+                                                      staticClass: "align-end"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "- " +
+                                                          _vm._s(
+                                                            _vm.$dollar.format(
+                                                              _vm.giftCardRedeem
+                                                                .amount
+                                                            )
+                                                          )
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-tile",
+                                                [
+                                                  _c("v-list-tile-content", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        _vm.giftCardSold.name
+                                                      )
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-list-tile-content",
+                                                    {
+                                                      staticClass: "align-end"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "+ " +
+                                                          _vm._s(
+                                                            _vm.$dollar.format(
+                                                              _vm.giftCardSold
+                                                                .amount
+                                                            )
+                                                          )
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-divider", {
+                                                attrs: { inset: "" }
+                                              }),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-tile",
+                                                [
+                                                  _c("v-list-tile-content", [
+                                                    _vm._v(
+                                                      "Net Technician Sale Total"
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-list-tile-content",
+                                                    {
+                                                      staticClass: "align-end"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(
+                                                          _vm.$dollar.format(
+                                                            _vm.netTechnicianSaleTotal
+                                                          )
+                                                        )
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-tile",
+                                                [
+                                                  _c("v-list-tile-content", [
+                                                    _vm._v(
+                                                      "\n\t\t\t\t\t\t\t\t\t\t\t\tSquare Total Collected\n\t\t\t\t\t\t\t\t\t\t\t"
+                                                    )
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-list-tile-content",
+                                                    {
+                                                      staticClass: "align-end"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(
+                                                          _vm.$dollar.format(
+                                                            _vm.squareTotalCollected
+                                                          )
+                                                        )
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
                                               )
                                             ],
                                             1
                                           ),
                                           _vm._v(" "),
                                           _c(
-                                            "v-list-tile",
+                                            "v-card-text",
+                                            {
+                                              class: [
+                                                _vm.defaultSummaryStyle,
+                                                _vm.summary.class
+                                              ]
+                                            },
                                             [
-                                              _c("v-list-tile-content", [
-                                                _vm._v(
-                                                  "\n\t\t\t\t\t\t\t\t\t\t\t\tSquare Total Collected\n\t\t\t\t\t\t\t\t\t\t\t"
-                                                )
-                                              ]),
-                                              _vm._v(" "),
                                               _c(
-                                                "v-list-tile-content",
-                                                { staticClass: "align-end" },
+                                                "span",
+                                                { staticClass: "title" },
                                                 [
                                                   _vm._v(
-                                                    _vm._s(
-                                                      _vm.$dollar.format(
-                                                        _vm.squareTotalCollected
-                                                      )
-                                                    )
+                                                    _vm._s(_vm.summary.message)
                                                   )
                                                 ]
                                               )
-                                            ],
-                                            1
+                                            ]
                                           )
                                         ],
                                         1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-card-text",
-                                        {
-                                          class: [
-                                            _vm.defaultSummaryStyle,
-                                            _vm.summary.class
-                                          ]
-                                        },
-                                        [
-                                          _c("span", { staticClass: "title" }, [
-                                            _vm._v(_vm._s(_vm.summary.message))
-                                          ])
-                                        ]
                                       )
                                     ],
                                     1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { md9: "" } },
+                                    [_c("existing-technician-sales")],
+                                    1
                                   )
                                 ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                { attrs: { md9: "" } },
-                                [_c("existing-technician-sales")],
                                 1
                               )
                             ],
@@ -35956,9 +35999,44 @@ var render = function() {
                     ],
                     1
                   )
-                ],
-                1
-              )
+                : _c(
+                    "v-container",
+                    { attrs: { "fill-height": "" } },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { "justify-center": "", "align-center": "" } },
+                        [
+                          _c(
+                            "v-flex",
+                            { attrs: { md6: "" } },
+                            [
+                              _c("sale-date-picker"),
+                              _vm._v(" "),
+                              _c(
+                                "v-card",
+                                [
+                                  _c(
+                                    "v-card-text",
+                                    { staticClass: "text-md-center" },
+                                    [
+                                      _c("span", { staticClass: "headline" }, [
+                                        _vm._v("No Sales")
+                                      ])
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
             ],
             1
           )

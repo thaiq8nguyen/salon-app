@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f08bc22-4422-4c10-9d74-e7ecbc88b366" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/emails/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/emails/technician-sales/added.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/SquareRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SquareRegister.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,15 +58,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="488">
@@ -88,17 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+            <state relative-caret-position="611">
+              <caret line="69" column="30" selection-start-line="58" selection-start-column="16" selection-end-line="69" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-963">
-              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="104">
+              <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
               <folding>
                 <element signature="e#1565#1571#0" expanded="true" />
               </folding>
@@ -109,7 +90,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
+            <state>
               <caret column="26" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
@@ -125,19 +106,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+            <state relative-caret-position="394">
+              <caret line="20" column="89" selection-start-line="20" selection-start-column="89" selection-end-line="20" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -216,8 +188,8 @@
         <option value="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" />
         <option value="$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" />
       </list>
     </option>
   </component>
@@ -509,18 +481,19 @@
       <workItem from="1554264670262" duration="13000" />
       <workItem from="1554305565462" duration="67839000" />
       <workItem from="1554619382361" duration="108000" />
-      <workItem from="1554662066697" duration="36908000" />
+      <workItem from="1554662066697" duration="37520000" />
+      <workItem from="1554851485409" duration="811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="452937000" />
+    <option name="totallyTimeSpent" value="454360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11318507" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11397935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -864,31 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/components/SquareRegister.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
           <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>
@@ -899,10 +851,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state relative-caret-position="442">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -913,27 +879,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js">
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        <state relative-caret-position="546">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue">
+    <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-963">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="e#1565#1571#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="611">
+          <caret line="69" column="30" selection-start-line="58" selection-start-column="16" selection-end-line="69" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+        <state relative-caret-position="394">
+          <caret line="20" column="89" selection-start-line="20" selection-start-column="89" selection-end-line="20" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+          <folding>
+            <element signature="e#1565#1571#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
