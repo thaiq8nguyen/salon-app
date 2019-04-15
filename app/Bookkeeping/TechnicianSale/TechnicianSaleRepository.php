@@ -31,16 +31,21 @@ class TechnicianSaleRepository implements TechnicianSaleInterface
     public function add($sales)
     {
         $technicianSales = [];
+
         foreach ($sales['sales'] as $sale) {
-            $technicianSales['technician_id'] = $sale['technicianID'];
-            $technicianSales['date'] = $sales['date'];
-            $technicianSales['sale_amount'] = $sale['amount'];
-            $technicianSales['tip_amount'] = $sale['tipAmount'];
+            $technician = Technician::find($sale['technicianID']);
+            $sale = new TechnicianSale([
+                'date' => $sales['date'],
+                'sale_amount' => $sale['amount'],
+                'tip_amount' => $sale['tipAmount']
+            ]);
+            $technicianSale = $technician->sales()->save($sale);
+            $technicianSales[] = $technicianSale;
+
+
         }
 
-        $results = TechnicianSale::create($technicianSales);
-
-        return $results;
+        return $technicianSales;
 
         //event(new TechnicianSalesAddedEvent($sales['date']));
     }
