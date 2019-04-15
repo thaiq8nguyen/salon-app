@@ -12,16 +12,15 @@ class TechnicianSalesAddedMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $squareReceipt;
     public $technicianSales;
+    public $summary;
 
-
-    /**
-     * TechnicianSalesAddedMail constructor.
-     * @param $technicianSales
-     */
-    public function __construct($technicianSales)
+    public function __construct($squareReceipt, $technicianSales, $summary)
     {
+        $this->squareReceipt = $squareReceipt;
         $this->technicianSales =  $technicianSales;
+        $this->summary = $summary;
     }
 
     /**
@@ -31,10 +30,10 @@ class TechnicianSalesAddedMail extends Mailable
      */
     public function build()
     {
-        $technicianSales = $this->technicianSales;
-        $saleDate = Carbon::createFromFormat('Y-m-d', $technicianSales[0]->sale->date)->format('m/d/Y');
+
+        $saleDate = Carbon::createFromFormat('Y-m-d', $this->squareReceipt->date)->format('m/d/Y');
         return $this->from(env('MAIL_FROM_ADDRESS'))
-            ->subject('Technician Sales for '. $saleDate)
+            ->subject('Sugar Nails sale summary for '.$saleDate)
             ->view('emails.technician-sales.added');
     }
 }

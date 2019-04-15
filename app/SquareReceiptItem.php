@@ -11,8 +11,15 @@ class SquareReceiptItem extends Model
 
     public function squareReceipt()
     {
-        return $this->hasOne('App\SquareReceipt');
+        // return $this->hasOne('App\SquareReceipt');
+        return $this->belongTo('App\SquareReceipt');
     }
+
+    public function account()
+    {
+        return $this->belongsTo('App\Account');
+    }
+
 
 
 

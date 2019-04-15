@@ -28,21 +28,21 @@ class TechnicianSaleRepository implements TechnicianSaleInterface
 
         return $technicianSales->makeHidden(['phone', 'email']);
     }
-
     public function add($sales)
     {
+        $technicianSales = [];
         foreach ($sales['sales'] as $sale) {
-            $newSale = TechnicianSale::create(['technician_id' => $sale['technicianID'],
-                    'date' => $sales['date'],
-                'sale_amount' => $sale['amount'], 'tip_amount' => $sale['tipAmount']]);
-
+            $technicianSales['technician_id'] = $sale['technicianID'];
+            $technicianSales['date'] = $sales['date'];
+            $technicianSales['sale_amount'] = $sale['amount'];
+            $technicianSales['tip_amount'] = $sale['tipAmount'];
         }
 
-        $newTechnicianSales = $this->getTechniciansWithSale($sales['date']);
+        $results = TechnicianSale::create($technicianSales);
 
-        event(new TechnicianSalesAddedEvent($newTechnicianSales));
+        return $results;
 
-        return 'success';
+        //event(new TechnicianSalesAddedEvent($sales['date']));
     }
 
     public function update($updateSale)
@@ -62,4 +62,15 @@ class TechnicianSaleRepository implements TechnicianSaleInterface
 
         return $sale;
     }
+
+    public function getTotalSaleAmount($date)
+    {
+        return TechnicianSale::totalSale()->where('date', $date)->first();
+    }
+
+    public function getTotalTipAmount($date)
+    {
+        return TechnicianSale::totalTip()->where('date', $date)->first();
+    }
+
 }

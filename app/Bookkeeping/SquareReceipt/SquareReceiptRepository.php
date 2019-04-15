@@ -51,7 +51,6 @@ class SquareReceiptRepository implements SquareReceiptInterface
 
     public function testUpdateSquareReceipt($date)
     {
-        $results = [];
         $carbonDate = Carbon::createFromFormat('Y-m-d', $date)->startOfDay();
 
         $client = new SquareClient();
@@ -71,6 +70,5 @@ class SquareReceiptRepository implements SquareReceiptInterface
 
         return $item;
     }
-
 
 }

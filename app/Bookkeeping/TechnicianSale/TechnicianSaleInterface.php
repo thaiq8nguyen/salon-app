@@ -20,5 +20,8 @@ interface TechnicianSaleInterface
 
     public function delete($saleID);
 
+    public function getTotalSaleAmount($date);
+
+    public function getTotalTipAmount($date);
 
 }

@@ -34597,8 +34597,7 @@ var render = function() {
                                             "v-list",
                                             [
                                               _vm._l(_vm.technicians, function(
-                                                technician,
-                                                key
+                                                technician
                                               ) {
                                                 return [
                                                   _c(
@@ -34646,7 +34645,7 @@ var render = function() {
                                                     1
                                                   ),
                                                   _vm._v(" "),
-                                                  _c("v-divider", { key: key })
+                                                  _c("v-divider")
                                                 ]
                                               })
                                             ],
@@ -79817,6 +79816,7 @@ __webpack_require__.r(__webpack_exports__);
       sales: getters.sales
     };
     Services_technician_sale_services__WEBPACK_IMPORTED_MODULE_0__["default"].upload(sales).then(function (response) {
+      console.log(response.data);
       commit("SET_LOADING", true);
       commit("RESET");
       dispatch("getTechniciansWithSale");

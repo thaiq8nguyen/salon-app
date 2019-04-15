@@ -12,6 +12,8 @@
 */
 
 use Illuminate\Support\Facades\Mail;
+use App\Bookkeeping\SquareReceipt\SquareReceiptInterface;
+use App\Bookkeeping\TechnicianSale\TechnicianSaleInterface;
 
 Route::get('/', 'AppController@index');
 
@@ -31,15 +33,4 @@ Route::get('/send-test-email', function () {
 
 /* TESTING MAIL RENDERING*/
 
-Route::get('/view-test-email', function () {
-    $date = '2019-04-06';
-    $technicianSales = App\Technician::with(['sale' => function ($query) use ($date) {
-        $query->where('date', $date);
-    }])->whereHas('sale', function ($query) use ($date) {
-        $query->where('date', $date);
-    })->orderBy('first_name', 'asc')->get();
-
-    $results = $technicianSales->makeHidden(['phone', 'email', 'technician_image']);
-
-    return new App\Mail\TechnicianSalesAddedMail($results);
-});
+//Route::get('/view-test-email', 'MailTestController@view');

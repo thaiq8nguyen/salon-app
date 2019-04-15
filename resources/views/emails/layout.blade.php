@@ -2,9 +2,12 @@
 <html lang="en">
     <head>
         <title>@yield('title')</title>
+        <style>@yield('style')</style>
     </head>
     <body>
-        @yield('content')
+        <div id="container" style="display: flex; justify-content: center;">
+            @yield('content')
+        </div>
     </body>
 </html>
 

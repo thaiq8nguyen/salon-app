@@ -10,22 +10,22 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-use App\TechnicianSale;
+
 
 class TechnicianSalesAddedEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $technicianSales;
+    public $saleDate;
 
 
     /**
      * TechnicianSalesAdded constructor.
-     * @param $date
+     * @param $saleDate
      */
-    public function __construct($technicianSales)
+    public function __construct($saleDate)
     {
-        $this->technicianSales = $technicianSales;
+        $this->saleDate = $saleDate;
     }
 
     /**

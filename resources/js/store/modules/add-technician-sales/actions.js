@@ -71,7 +71,7 @@ export default {
 		};
 		TechnicianSaleServices.upload(sales)
 			.then(response => {
-
+				console.log(response.data);
 				commit("SET_LOADING", true);
 				commit("RESET");
 				dispatch("getTechniciansWithSale");

@@ -17,4 +17,5 @@ interface SquareReceiptInterface
     public function redeemGiftCard($redeem);
 
     public function testUpdateSquareReceipt($date);
+
 }

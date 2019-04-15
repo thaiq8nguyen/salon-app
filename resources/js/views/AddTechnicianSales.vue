@@ -36,14 +36,14 @@
 										</v-card-title>
 										<v-divider></v-divider>
 										<v-list>
-											<template v-for="(technician, key) in technicians">
+											<template v-for="technician in technicians">
 												<v-list-tile :key="technician.id" @click="showNewSaleDialog(technician)">
 													<v-list-tile-avatar>
 														<img alt="" :src="`images/technicians/${technician.technician_image}.svg`">
 													</v-list-tile-avatar>
 													<v-list-tile-content>{{ technician.first_name }}&nbsp;{{ technician.last_name }}</v-list-tile-content>
 												</v-list-tile>
-												<v-divider :key="key"></v-divider>
+												<v-divider></v-divider>
 											</template>
 										</v-list>
 									</v-card>

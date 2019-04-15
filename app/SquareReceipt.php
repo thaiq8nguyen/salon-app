@@ -20,4 +20,5 @@ class SquareReceipt extends Model
             ->selectRaw('square_receipt_items.id, square_receipt_items.square_receipt_id,accounts.id as accountID, 
             accounts.name, square_receipt_items.amount');
     }
+
 }

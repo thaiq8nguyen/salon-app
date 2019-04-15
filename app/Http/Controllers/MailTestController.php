@@ -1,41 +1,34 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Http\Controllers;
 
-use App\Events\TechnicianSalesAddedEvent;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Log;
-
-use App\Mail\TechnicianSalesAddedMail;
-
+use Illuminate\Http\Request;
 use App\Bookkeeping\SquareReceipt\SquareReceiptInterface;
 use App\Bookkeeping\TechnicianSale\TechnicianSaleInterface;
+use App\Mail\TechnicianSalesAddedMail;
 
-class SendTechnicianSalesAddedNotification
+class MailTestController extends Controller
 {
-    public $squareReceipt;
-    public $technicianSale;
+    protected $squareReceipt;
+    protected $technicianSale;
 
     public function __construct(SquareReceiptInterface $squareReceipt, TechnicianSaleInterface $technicianSale)
     {
         $this->squareReceipt =  $squareReceipt;
         $this->technicianSale = $technicianSale;
     }
-
-    /**
-     * Handle the event.
-     *
-     * @param  $date
-     * @return void
-     */
-    public function handle($date)
+    public function view()
     {
-        // Get Square Receipt
+        $squareReceipt = $this->squareReceipt->getSquareReceipt('2019-04-06');
+        $totalSaleAmount = $this->technicianSale->getTotalSaleAmount('2019-04-06');
+        $totalTipAmount = $this->technicianSale->getTotalTipAmount('2019-04-06');
 
-        $squareReceipt = $this->squareReceipt->getSquareReceipt($date);
+        $technicianSales = ['sales' => $this->technicianSale->getTechniciansWithSale('2019-04-06'),
+            'totalSale' => $totalSaleAmount,
+            'totalTip' => $totalTipAmount
+        ];
         $receiptItems = $squareReceipt['receiptItems']->toArray();
+
         $squareReceiptItem['creditCardTip'] = array_values(array_filter($receiptItems, function ($item) {
             return $item['name'] == 'Credit Card Tip';
         }))[0];
@@ -64,15 +57,6 @@ class SendTechnicianSalesAddedNotification
             return $item['name'] == 'Other Receipt';
         }))[0];
 
-        // Get Technician Sales
-
-        $technicianSales = ['sales' => $this->technicianSale->getTechniciansWithSale($date),
-            'totalSaleAmount' => $this->technicianSale->getTotalSaleAmount($date),
-            'totalTipAmount' => $this->technicianSale->getTotalTipAmount($date)
-        ];
-
-        // Compare Square Receipt with Technician Sales
-
         $summary['technicianSaleTotalCollected'] =
             $technicianSales['totalSale']['amount'] +
             $squareReceiptItem['creditCardTip']['amount'] +
@@ -84,10 +68,6 @@ class SendTechnicianSalesAddedNotification
             $squareReceiptItem['cashReceipt']['amount'] +
             $squareReceiptItem['creditCardReceipt']['amount'];
 
-        // Send email
-
-        $mail = new TechnicianSalesAddedMail($squareReceipt, $technicianSales, $summary);
-
-        Mail::to('discoverylight@yahoo.com')->send($mail);
+        return new TechnicianSalesAddedMail($squareReceipt, $technicianSales, $summary);
     }
 }
