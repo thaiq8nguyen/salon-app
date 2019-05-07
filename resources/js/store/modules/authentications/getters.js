@@ -23,12 +23,17 @@ export default {
 	},
 	isApproved (state) {
 
-		return !!state.authentication.approved;
+		return state.authentication.approved;
 
 	},
 	errorMessage (state) {
 
 		return state.errorMessage;
+
+	},
+	role (state) {
+
+		return state.authentication.role;
 
 	}
 };

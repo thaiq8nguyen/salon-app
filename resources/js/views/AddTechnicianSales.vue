@@ -39,7 +39,8 @@
 											<template v-for="technician in technicians">
 												<v-list-tile :key="technician.id" @click="showNewSaleDialog(technician)">
 													<v-list-tile-avatar>
-														<img alt="" :src="`images/technicians/${technician.technician_image}.svg`">
+														<img v-if="technician.technician_image" alt="" :src="`/images/technicians/${technician.technician_image}`">
+														<v-icon v-else large>account_circle</v-icon>
 													</v-list-tile-avatar>
 													<v-list-tile-content>{{ technician.first_name }}&nbsp;{{ technician.last_name }}</v-list-tile-content>
 												</v-list-tile>
@@ -73,7 +74,16 @@
 		<v-dialog v-model="newSaleDialog" :max-width="600">
 			<v-card>
 				<v-card-title>
-					<span class="title">{{ sale.fullName }}</span>
+					<v-layout>
+						<v-flex>
+							<v-avatar size="120px">
+								<img alt="" :src="`/images/technicians/${sale.avatar}`">
+							</v-avatar>
+						</v-flex>
+						<v-flex>
+							<span class="headline">{{ sale.fullName }}</span>
+						</v-flex>
+					</v-layout>
 				</v-card-title>
 				<v-divider></v-divider>
 				<v-form @submit.prevent="validate">
@@ -132,12 +142,14 @@ export default {
 
 		return {
 			sale: {
+				avatar: "",
 				technicianID: "",
 				fullName: "",
 				amount: "",
 				tipAmount: ""
 			},
 			defaultSale: {
+				avatar: "",
 				technicianID: "",
 				fullName: "",
 				amount: "",
@@ -258,6 +270,7 @@ export default {
 	methods: {
 		showNewSaleDialog (technician) {
 
+			this.sale.avatar = technician.technician_image;
 			this.sale.fullName = technician.first_name + " " + technician.last_name;
 			this.sale.technicianID = technician.id;
 			this.newSaleDialog = true;

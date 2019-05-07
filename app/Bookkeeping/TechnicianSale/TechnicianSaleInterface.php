@@ -14,6 +14,8 @@ interface TechnicianSaleInterface
 
     public function getTechniciansWithNoSale($date);
 
+    public function getTechnicianSalesByPeriod($month);
+
     public function add($sales);
 
     public function update($sale);
@@ -23,5 +25,7 @@ interface TechnicianSaleInterface
     public function getTotalSaleAmount($date);
 
     public function getTotalTipAmount($date);
+
+
 
 }

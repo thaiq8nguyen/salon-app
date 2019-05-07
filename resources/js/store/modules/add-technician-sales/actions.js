@@ -7,6 +7,7 @@ export default {
 		dispatch("Square/getDailyReceipts", null, { root: true });
 		dispatch("getTechniciansWithNoSale");
 		dispatch("getTechniciansWithSale");
+		dispatch("getTechnicianSalesByPeriod");
 
 	},
 	getTechniciansWithNoSale ({ commit, getters, rootGetters }) {
@@ -48,6 +49,24 @@ export default {
 
 	},
 
+	getTechnicianSalesByPeriod ({ commit, rootGetters }) {
+
+		const date = rootGetters["date"];
+
+		TechnicianSaleServices.getTechnicianSalesByPeriod(date)
+			.then(response => {
+
+				commit("SET_TECHNICIAN_SALES_BY_PERIOD", response.data.sale);
+
+			})
+			.catch(errors => {
+
+				console.log(errors.response);
+
+			});
+
+	},
+
 	add ({ commit }, sale) {
 
 		commit("ADD_SALE", sale);
@@ -71,7 +90,7 @@ export default {
 		};
 		TechnicianSaleServices.upload(sales)
 			.then(response => {
-				console.log(response.data);
+
 				commit("SET_LOADING", true);
 				commit("RESET");
 				dispatch("getTechniciansWithSale");

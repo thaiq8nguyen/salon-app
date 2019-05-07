@@ -2,6 +2,7 @@
 
 namespace App\Bookkeeping\TechnicianSale;
 
+use Carbon\CarbonPeriod;
 use App\Technician;
 use App\TechnicianSale;
 
@@ -28,6 +29,47 @@ class TechnicianSaleRepository implements TechnicianSaleInterface
 
         return $technicianSales->makeHidden(['phone', 'email']);
     }
+
+    public function getTechnicianSalesByPeriod($period)
+    {
+        /*$technicians = Technician::with(['sales' => function ($query) use ($period) {
+            $query->select('technician_id', 'date', 'sale_amount', 'tip_amount')
+                ->whereBetween('date', [$period['begin'], $period['end']]);
+        }])->whereHas('sales', function ($query) use ($period) {
+            $query->whereBetween('date', [$period['begin'], $period['end']]);
+        })->get()->makeHidden(['first_name', 'last_name', 'email', 'phone', 'technician_image']);
+
+        $dates = [];
+
+        $period = CarbonPeriod::create($period['begin'], $period['end']);
+
+        foreach ($period as $date) {
+            $dates[] =  $date->format('Y-m-d');
+        }
+
+        $techs = [];
+        $results = [];
+        foreach ($dates as $date) {
+            foreach ($technicians as $technician) {
+                foreach ($technician->sales as $sale) {
+                    if ($date == $sale['date']) {
+                        $techs[] = [
+                            'technician' => $technician['full_name'],
+                            'amount' => $sale['sale_amount'],
+                            'tip_amount' => $sale['tip_amount']];
+                    }
+                }
+            }
+            $results[] = ['date' => $date, 'technicians' => $techs];
+        }*/
+
+        $results = TechnicianSale::with(['technician' => function ($query) {
+            $query->select(['id', 'last_name', 'first_name', 'technician_image']);
+        }])->whereBetween('date', [$period['begin'], $period['end']])->orderBy('date','asc')->get();
+
+        return $results;
+    }
+
     public function add($sales)
     {
         $technicianSales = [];

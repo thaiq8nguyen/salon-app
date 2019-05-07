@@ -21,14 +21,25 @@ export default {
 	},
 	redeemGiftCard ({ commit, dispatch }, redeem) {
 
-		return Square.redeemGiftCard(redeem)
-			.then(response => {
+		return new Promise((resolve, reject) => {
 
-				dispatch("getDailyReceipts");
+			return Square.redeemGiftCard(redeem)
+				.then(response => {
 
-			})
-			.catch(errors => {
-			});
+					resolve(response);
+
+				})
+				.catch(errors => {
+
+					if (errors.response) {
+
+						reject(errors.response.status);
+
+					}
+
+				});
+
+		});
 
 	}
 };

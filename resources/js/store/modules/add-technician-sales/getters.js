@@ -113,5 +113,10 @@ export default {
 		return state.techniciansWithSale.length === 0;
 
 	},
+	technicianSalesByPeriod (state) {
+
+		return state.technicianSalesByPeriod;
+
+	},
 
 };

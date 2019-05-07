@@ -8,6 +8,7 @@ const state = {
 	technicians: [],
 	techniciansWithNoSale: [],
 	techniciansWithSale: [],
+	technicianSalesByPeriod: [],
 	loading: false,
 
 };

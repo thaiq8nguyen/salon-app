@@ -20,6 +20,11 @@ export default {
 		state.techniciansWithNoSale = technicians;
 
 	},
+	SET_TECHNICIAN_SALES_BY_PERIOD (state, sales) {
+
+		state.technicianSalesByPeriod = sales;
+
+	},
 	DELETE_PENDING_SALES (state) {
 
 		state.sales = [];

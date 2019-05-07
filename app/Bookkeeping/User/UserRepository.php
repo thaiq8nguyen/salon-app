@@ -11,26 +11,18 @@ class UserRepository implements UserInterface
     public function login($credential)
     {
         if (Auth::attempt(['email' => $credential['email'], 'password' => $credential['password']])) {
-            if (!Auth::user()->approved_at) {
-                $result = [
-                    'approved' => false,
-                    'message' => 'Your registration is pending. Once it has approved, you may access the application'
-                ];
-                return $result;
-            }
             $user = Auth::user();
             $token = $user->createToken('access');
 
             $result = [
-                'approved' => true,
                 'accessToken' => $token->accessToken,
                 'expiration' => Carbon::parse($token->token->expires_at)->toDateTimeString(),
-                'userFullName' => $user->name
+                'userFullName' => $user->name,
+                'role' => $user->roles()->first()->name,
             ];
 
             return $result;
         }
-
 
         return false;
     }

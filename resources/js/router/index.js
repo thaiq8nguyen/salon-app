@@ -15,22 +15,49 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
 
-	if (to.meta.requiresAuth) {
+	const state = Services.persistState.load();
 
-		const state = Services.persistState.load();
-		const isAuthenticated = state.Authentications.authentication.accessToken;
+	const isAuthenticated = state.Authentications.authentication.accessToken;
+
+	if (to.matched.some(record => record.meta.requiresAuth)) {
 
 		if (isAuthenticated) {
 
-			next();
+			const role = state.Authentications.authentication.role;
 
-		} else {
+			if (to.matched.some(record => record.meta.isAdmin)) {
 
-			next({
+				if (role === "admin") {
 
-				path: "/login"
+					next();
 
-			});
+				} else {
+
+					next({
+
+						name: "Unauthorized"
+
+					});
+
+				}
+
+			} else if (to.matched.some(record => record.meta.isAssistant)) {
+
+				if (role === "assistant") {
+
+					next();
+
+				} else {
+
+					next({
+
+						name: "Unauthorized"
+
+					});
+
+				}
+
+			}
 
 		}
 

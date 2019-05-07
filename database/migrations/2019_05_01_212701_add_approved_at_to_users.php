@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersRolesTable extends Migration
+class AddApprovedAtToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateUsersRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_roles', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->timestamp('approved_at')->after('remember_token')->nullable();
         });
     }
 
@@ -26,6 +25,8 @@ class CreateUsersRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_roles');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('approved_at');
+        });
     }
 }

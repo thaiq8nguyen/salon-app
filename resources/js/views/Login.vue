@@ -105,17 +105,29 @@ export default {
 
 			this.isAuthenticating = true;
 			this.$store.dispatch("Authentications/login", this.credential)
-				.then(approved => {
+				.then(() => {
 
-					if (approved) {
+					let role = this.$store.getters["Authentications/role"];
 
-						this.$router.push("dashboard");
+					if (role === "admin") {
+
+						this.$router.push({ name: "Dashboard" });
+
+					} else if (role === "assistant") {
+
+						this.$router.push({ name: "AssistantDashboard" });
 
 					} else {
 
-						this.$router.push("pending-registration");
+						this.$router.push({ name: "Unauthorized" });
 
 					}
+
+
+
+
+
+
 
 				})
 				.catch(errors => {

@@ -14,7 +14,10 @@
 use Illuminate\Support\Facades\Mail;
 use App\Bookkeeping\SquareReceipt\SquareReceiptInterface;
 use App\Bookkeeping\TechnicianSale\TechnicianSaleInterface;
+use Carbon\Carbon;
 
+use App\Technician;
+use App\TechnicianSale;
 Route::get('/', 'AppController@index');
 
 /*TESTING MAIL SERVICES*/
@@ -34,3 +37,5 @@ Route::get('/send-test-email', function () {
 /* TESTING MAIL RENDERING*/
 
 //Route::get('/view-test-email', 'MailTestController@view');
+
+

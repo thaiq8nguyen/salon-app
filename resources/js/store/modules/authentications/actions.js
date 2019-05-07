@@ -1,7 +1,8 @@
 import Vue from "vue";
 import AuthenticationServices from "Services/authentication-services";
 import Plugins from "Plugins";
-import Router from "Router";
+import router from "Router";
+
 let Services = new Vue();
 Vue.use(Plugins);
 
@@ -9,31 +10,27 @@ export default {
 
 	login ({ commit }, credential) {
 
-
 		return new Promise((resolve, reject) => {
 
 			return AuthenticationServices.login(credential)
 				.then(response => {
 
-					if (response.data.user.approved) {
-
-						commit("SET_AUTHENTICATION", response.data.user);
-						resolve(true);
-
-					} else {
-
-						resolve(false);
-
-					}
+					commit("SET_AUTHENTICATION", response.data.user);
+					resolve(true);
 
 				})
 				.catch(errors => {
 
-					if (errors.response.status === 401) {
+					if (errors.response) {
 
-						reject(errors.response.data.message);
+						if (errors.response.status === 401) {
+
+							reject(errors.response.data.message);
+
+						}
 
 					}
+
 					Services.persistState.remove();
 
 				});
@@ -47,7 +44,7 @@ export default {
 		return AuthenticationServices.logout()
 			.then(response => {
 
-				Router.push("logout");
+				router.push({ name: "Login", query: { action: "logout" } });
 
 				commit("RESET_AUTHENTICATION");
 

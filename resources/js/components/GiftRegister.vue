@@ -65,6 +65,10 @@ export default {
 				receiptItemID: "",
 				amount: ""
 			},
+			defaultRedeem: {
+				receiptItemID: "",
+				amount: ""
+			},
 			dictionary: {
 				custom: {
 					amount: {
@@ -74,6 +78,7 @@ export default {
 					},
 				}
 			},
+			loading: false,
 		};
 
 	},
@@ -93,11 +98,7 @@ export default {
 			return this.$store.getters["Square/giftCardSold"];
 
 		},
-		loading () {
 
-			return this.$store.getters["Square/loading"];
-
-		}
 	},
 	mounted () {
 
@@ -120,10 +121,14 @@ export default {
 		},
 		redeemGiftCard () {
 
+			this.loading = true;
 			this.$store.dispatch("Square/redeemGiftCard", { receiptItemID: this.giftCardRedeem.id, amount: this.redeem.amount })
 				.then(response => {
 
+					this.redeem = Object.assign("", this.defaultRedeem);
+					this.$validator.reset();
 					this.giftCardRedeemDialog = false;
+					this.$store.dispatch("Square/getDailyReceipts");
 
 				})
 				.catch(errors => {
@@ -132,6 +137,9 @@ export default {
 
 				})
 				.then(() => {
+
+					this.loading = false;
+
 				});
 
 		}

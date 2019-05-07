@@ -21,16 +21,22 @@ Route::post('/login', 'AuthenticationController@login');
 Route::post('/register', 'AuthenticationController@register');
 
 Route::group(['middleware' => ['auth:api']], function () {
-    Route::group(['middleware' => ['approved']], function () {
-        Route::post('/logout', 'AuthenticationController@logout');
+
+    Route::post('/logout', 'AuthenticationController@logout');
+
+    Route::group(['middleware' => ['role:admin']], function () {
+
 
         Route::get('/technicians', 'TechnicianController@getActive');
         Route::post('/technicians', 'TechnicianController@add');
 
         Route::get('/technician-sales', 'TechnicianSaleController@get');
+
+
         Route::post('/technician-sales', 'TechnicianSaleController@add');
         Route::put('/technician-sales', 'TechnicianSaleController@update');
         Route::delete('/technician-sales/{saleID}', 'TechnicianSaleController@delete');
+
 
         Route::get('/square-receipts', 'SquareReceiptController@getDailySquareReceipt');
 
@@ -53,6 +59,10 @@ Route::group(['middleware' => ['auth:api']], function () {
         //Route::get('/pay-periods', 'PayPeriodController@generatePayPeriods');
 
         Route::get('/pay-periods', 'PayPeriodController@payPeriod');
+    });
+
+    Route::group(['middleware' => ['role:assistant']], function () {
+
     });
 
 

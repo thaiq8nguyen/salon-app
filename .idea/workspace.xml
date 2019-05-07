@@ -2,7 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f08bc22-4422-4c10-9d74-e7ecbc88b366" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/technicians/annie120x120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/technicians/carot120x120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/technicians/thuy120x120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/technicians/tiny120x120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/assistant/TopNavigationBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/Unauthorized.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/assistant/AssistantDashboard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/assistant-api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckApproved.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Technician.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Technician.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/TechnicianSale.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TechnicianSale.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_04_142736_create_users_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_04_142736_create_role_user_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_04_143234_add_approved_at_to_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/GiftRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/GiftRegister.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/services/technician-sale-services.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/technician-sale-services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/square/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/square/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+            <state relative-caret-position="797">
+              <caret line="92" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
@@ -66,17 +104,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+            <state relative-caret-position="-667">
+              <caret line="42" column="89" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/technician_sales">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="507">
+              <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -84,31 +122,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Technician.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            <state relative-caret-position="721">
+              <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/TechnicianSale.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            <state relative-caret-position="182">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding>
-                <element signature="e#50#69#0#PHP" expanded="true" />
+                <element signature="e#23#62#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Events/TechnicianSalesAddedEvent.php">
+        <entry file="file://$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state relative-caret-position="74">
+              <caret line="66" column="78" selection-start-line="66" selection-start-column="78" selection-end-line="66" selection-end-column="78" />
               <folding>
-                <element signature="e#30#66#0#PHP" expanded="true" />
+                <element signature="e#50#74#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+              <folding>
+                <element signature="e#7#389#0#PHP" expanded="true" />
+                <element signature="e#391#427#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,8 +173,8 @@
         <option value="PHP Resository" />
         <option value="PHP Repository" />
         <option value="Vuex Index" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
     <option name="SCHEME" value="Project" />
@@ -139,57 +190,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/js/services/user-services.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AuthenticationController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/users/actions.js" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/CheckApproved.php" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/mutations.js" />
-        <option value="$PROJECT_DIR$/resources/js/components/UserSettings.vue" />
-        <option value="$PROJECT_DIR$/resources/js/components/App.vue" />
-        <option value="$PROJECT_DIR$/resources/js/views/PendingRegistration.vue" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js" />
-        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" />
-        <option value="$PROJECT_DIR$/resources/js/router/routes.js" />
-        <option value="$PROJECT_DIR$/resources/js/router/index.js" />
-        <option value="$PROJECT_DIR$/resources/js/views/Login.vue" />
-        <option value="$PROJECT_DIR$/app/Mail/TechnicianSalesAdded.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/Events/TechnicianSalesAdded.php" />
-        <option value="$PROJECT_DIR$/resources/js/components/SquareRegister.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js" />
         <option value="$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue" />
         <option value="$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue" />
-        <option value="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleInterface.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" />
         <option value="$PROJECT_DIR$/app/Account.php" />
         <option value="$PROJECT_DIR$/app/SquareReceiptItem.php" />
         <option value="$PROJECT_DIR$/app/Events/TechnicianSalesAddedEvent.php" />
-        <option value="$PROJECT_DIR$/app/Technician.php" />
         <option value="$PROJECT_DIR$/app/SquareReceipt.php" />
         <option value="$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareReceiptInterface.php" />
         <option value="$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareReceiptRepository.php" />
-        <option value="$PROJECT_DIR$/app/TechnicianSale.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/technician-sales/added.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/layout.blade.php" />
         <option value="$PROJECT_DIR$/app/Mail/TechnicianSalesAddedMail.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailTestController.php" />
         <option value="$PROJECT_DIR$/app/Listeners/SendTechnicianSalesAddedNotification.php" />
-        <option value="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/mutations.js" />
+        <option value="$PROJECT_DIR$/routes/public-api.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Role.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_04_04_142736_create_role_user_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_01_212701_add_approved_at_to_users.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/CheckRole.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/CheckApproved.php" />
+        <option value="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/js/views/Unauthorized.vue" />
+        <option value="$PROJECT_DIR$/resources/js/router/routes.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js" />
+        <option value="$PROJECT_DIR$/resources/js/router/index.js" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js" />
+        <option value="$PROJECT_DIR$/resources/js/views/Login.vue" />
+        <option value="$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php" />
+        <option value="$PROJECT_DIR$/resources/js/components/assistant/TopNavigationBar.vue" />
+        <option value="$PROJECT_DIR$/resources/js/views/assistant/AssistantDashboard.vue" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/square/actions.js" />
+        <option value="$PROJECT_DIR$/resources/js/components/GiftRegister.vue" />
+        <option value="$PROJECT_DIR$/app/TechnicianSale.php" />
+        <option value="$PROJECT_DIR$/app/Technician.php" />
+        <option value="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleInterface.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/index.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/mutations.js" />
+        <option value="$PROJECT_DIR$/resources/js/services/technician-sale-services.js" />
         <option value="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js" />
+        <option value="$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php" />
+        <option value="$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue" />
+        <option value="$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue" />
       </list>
     </option>
   </component>
@@ -304,8 +355,9 @@
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="-2560" />
-    <option name="width" value="2560" />
-    <option name="height" value="1080" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -351,6 +403,13 @@
               <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="salon-app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Bookkeeping" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Events" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -369,14 +428,12 @@
             <path>
               <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="salon-app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Listeners" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="salon-app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Mail" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
@@ -401,6 +458,35 @@
               <item name="salon-app" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="assistant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -419,6 +505,21 @@
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="add-technician-sales" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="salon-app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="assistant" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="salon-app" type="b2602c69:ProjectViewProjectNode" />
@@ -449,15 +550,15 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images/technicians" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/emails/technician-sales" />
       <recent name="$PROJECT_DIR$/resources/js/components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/images/technicians" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -500,18 +601,20 @@
       <workItem from="1554662066697" duration="37520000" />
       <workItem from="1554851485409" duration="41754000" />
       <workItem from="1555182022253" duration="6051000" />
-      <workItem from="1555227380011" duration="9664000" />
+      <workItem from="1555227380011" duration="9940000" />
+      <workItem from="1555426026489" duration="106000" />
+      <workItem from="1555535011567" duration="62095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511018000" />
+    <option name="totallyTimeSpent" value="573495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11596505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22875299" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -529,7 +632,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.11199365" />
+      <window_info anchor="right" id="Database" order="3" weight="0.11199365" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -556,291 +659,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5436" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/views/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-04-07.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="e#19#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/router/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1289" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Events/Registered.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/logging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-04-08.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9678" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/SquareRegister.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="105" column="20" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/TechnicianPendingSales.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2015">
-          <caret line="159" column="47" selection-start-line="159" selection-start-column="47" selection-end-line="159" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-          <folding>
-            <element signature="e#1565#1571#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/update-technician-sales/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TechnicianController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/views/UpdateTechnicianSales.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="20" column="89" selection-start-line="20" selection-start-column="89" selection-end-line="20" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SquareReceiptItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareReceiptInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/square_receipt_items">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/square/getters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SquareReceipt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/SquareReceipt/SquareReceiptRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1690">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/accounts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/emails/technician-sales/added.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="60" column="94" selection-start-line="60" selection-start-column="94" selection-end-line="60" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Mail/TechnicianSalesAddedMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#28#46#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/TechnicianSale.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailTestController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -861,48 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-            <element signature="e#391#427#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/TechnicianSalesAddedEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding>
-            <element signature="e#30#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Technician.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://4addcc9b-075c-45a7-9d19-3a07b8d1e96e/schema/salonapp/table/technician_sales">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -910,13 +686,372 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/TechnicianSalesAddedEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#30#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-307">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="21" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#164#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/plugins/persist-states.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/assistant-api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_04_143234_add_approved_at_to_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="16" column="82" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="23" column="62" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_01_212701_add_approved_at_to_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_04_142736_create_role_user_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#22#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="75" column="59" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/mutations.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/Unauthorized.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1066">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/getters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckApproved.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="61" column="79" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/User/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/TopNavigationBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="41" column="6" lean-forward="true" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/assistant/TopNavigationBar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckRole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#39#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1704">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/assistant/AssistantDashboard.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1310">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ExistingTechnicianSales.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/authentications/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TechnicianSaleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Technician.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/square/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="856">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/plugins/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="99" column="13" lean-forward="true" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/services/technician-sale-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/getters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/GiftRegister.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3159">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store/modules/add-technician-sales/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+            <element signature="e#391#427#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Bookkeeping/TechnicianSale/TechnicianSaleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        <state relative-caret-position="74">
+          <caret line="66" column="78" selection-start-line="66" selection-start-column="78" selection-end-line="66" selection-end-column="78" />
           <folding>
-            <element signature="e#50#69#0#PHP" expanded="true" />
+            <element signature="e#50#74#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/TechnicianSale.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/AddTechnicianSales.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-667">
+          <caret line="42" column="89" selection-start-line="42" selection-start-column="89" selection-end-line="42" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/SaleDatePicker.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
         </state>
       </provider>
     </entry>
